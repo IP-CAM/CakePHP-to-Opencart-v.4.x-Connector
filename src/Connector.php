@@ -175,6 +175,14 @@ class Connector extends Plugin
         $connection = \Cake\Datasource\ConnectionManager::get($this->getDatasource());
         $table->setConnection($connection);
         foreach ($table->associations() as $association) {
+            /*
+            Opencart stores translations in tables with suffix "_description",
+            but bake doesn't automatically pick that relation up. So we manually
+            associated translatable items (in their respective table classes) as
+            - hasOne Description for selecting translations in default language
+            - hasMany Descriptions for selects containing all languages
+            The below populates conditions with languageId from plugin config
+            */
             if (substr($association->getName(), -11) == 'Description'
             && empty($association->getConditions())) {
                 $association->setConditions([
