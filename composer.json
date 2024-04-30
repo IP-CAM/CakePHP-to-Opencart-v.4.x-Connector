@@ -1,0 +1,14 @@
+{
+    "name": "mehov/cakephp-opencart",
+    "description": "CakePHP to Opencart connector",
+    "type": "cakephp-plugin",
+    "keywords": ["cakephp", "opencart", "ecommerce"],
+    "require": {
+        "cakephp/cakephp": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "CakePHPOpencart\\": "src"
+        }
+    }
+}
