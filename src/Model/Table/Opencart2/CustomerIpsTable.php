@@ -3,7 +3,6 @@ namespace CakePHPOpencart\Model\Table\Opencart2;
 
 use Cake\ORM\Query;
 use Cake\ORM\RulesChecker;
-use Cake\ORM\Table;
 use Cake\Validation\Validator;
 
 /**
@@ -20,7 +19,7 @@ use Cake\Validation\Validator;
  * @method \CakePHPOpencart\Model\Entity\CustomerIp[] patchEntities($entities, array $data, array $options = [])
  * @method \CakePHPOpencart\Model\Entity\CustomerIp findOrCreate($search, callable $callback = null, $options = [])
  */
-class CustomerIpsTable extends Table
+class CustomerIpsTable extends \CakePHPOpencart\Model\Table\OpencartAbstract\AbstractCustomerIpsTable
 {
     /**
      * Initialize method

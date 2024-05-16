@@ -3,7 +3,6 @@ namespace CakePHPOpencart\Model\Table\Opencart2;
 
 use Cake\ORM\Query;
 use Cake\ORM\RulesChecker;
-use Cake\ORM\Table;
 use Cake\Validation\Validator;
 
 /**
@@ -20,7 +19,7 @@ use Cake\Validation\Validator;
  * @method \CakePHPOpencart\Model\Entity\Layout[] patchEntities($entities, array $data, array $options = [])
  * @method \CakePHPOpencart\Model\Entity\Layout findOrCreate($search, callable $callback = null, $options = [])
  */
-class LayoutsTable extends Table
+class LayoutsTable extends \CakePHPOpencart\Model\Table\OpencartAbstract\AbstractLayoutsTable
 {
     /**
      * Initialize method

@@ -3,7 +3,6 @@ namespace CakePHPOpencart\Model\Table\Opencart4;
 
 use Cake\ORM\Query;
 use Cake\ORM\RulesChecker;
-use Cake\ORM\Table;
 use Cake\Validation\Validator;
 
 /**
@@ -20,7 +19,7 @@ use Cake\Validation\Validator;
  * @method \CakePHPOpencart\Model\Entity\Country[] patchEntities($entities, array $data, array $options = [])
  * @method \CakePHPOpencart\Model\Entity\Country findOrCreate($search, callable $callback = null, $options = [])
  */
-class CountriesTable extends Table
+class CountriesTable extends \CakePHPOpencart\Model\Table\OpencartAbstract\AbstractCountriesTable
 {
     /**
      * Initialize method

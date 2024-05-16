@@ -3,7 +3,6 @@ namespace CakePHPOpencart\Model\Table\Opencart4;
 
 use Cake\ORM\Query;
 use Cake\ORM\RulesChecker;
-use Cake\ORM\Table;
 use Cake\Validation\Validator;
 
 /**
@@ -18,7 +17,7 @@ use Cake\Validation\Validator;
  * @method \CakePHPOpencart\Model\Entity\Download[] patchEntities($entities, array $data, array $options = [])
  * @method \CakePHPOpencart\Model\Entity\Download findOrCreate($search, callable $callback = null, $options = [])
  */
-class DownloadsTable extends Table
+class DownloadsTable extends \CakePHPOpencart\Model\Table\OpencartAbstract\AbstractDownloadsTable
 {
     /**
      * Initialize method

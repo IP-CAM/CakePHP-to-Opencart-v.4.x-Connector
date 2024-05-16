@@ -3,7 +3,6 @@ namespace CakePHPOpencart\Model\Table\Opencart2;
 
 use Cake\ORM\Query;
 use Cake\ORM\RulesChecker;
-use Cake\ORM\Table;
 use Cake\Validation\Validator;
 
 /**
@@ -18,7 +17,7 @@ use Cake\Validation\Validator;
  * @method \CakePHPOpencart\Model\Entity\TaxClass[] patchEntities($entities, array $data, array $options = [])
  * @method \CakePHPOpencart\Model\Entity\TaxClass findOrCreate($search, callable $callback = null, $options = [])
  */
-class TaxClassesTable extends Table
+class TaxClassesTable extends \CakePHPOpencart\Model\Table\OpencartAbstract\AbstractTaxClassesTable
 {
     /**
      * Initialize method

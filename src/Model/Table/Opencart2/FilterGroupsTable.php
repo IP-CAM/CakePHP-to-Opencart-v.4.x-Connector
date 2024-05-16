@@ -3,7 +3,6 @@ namespace CakePHPOpencart\Model\Table\Opencart2;
 
 use Cake\ORM\Query;
 use Cake\ORM\RulesChecker;
-use Cake\ORM\Table;
 use Cake\Validation\Validator;
 
 /**
@@ -18,7 +17,7 @@ use Cake\Validation\Validator;
  * @method \CakePHPOpencart\Model\Entity\FilterGroup[] patchEntities($entities, array $data, array $options = [])
  * @method \CakePHPOpencart\Model\Entity\FilterGroup findOrCreate($search, callable $callback = null, $options = [])
  */
-class FilterGroupsTable extends Table
+class FilterGroupsTable extends \CakePHPOpencart\Model\Table\OpencartAbstract\AbstractFilterGroupsTable
 {
     /**
      * Initialize method

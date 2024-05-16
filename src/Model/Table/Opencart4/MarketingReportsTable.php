@@ -3,7 +3,6 @@ namespace CakePHPOpencart\Model\Table\Opencart4;
 
 use Cake\ORM\Query;
 use Cake\ORM\RulesChecker;
-use Cake\ORM\Table;
 use Cake\Validation\Validator;
 
 /**
@@ -21,7 +20,7 @@ use Cake\Validation\Validator;
  * @method \CakePHPOpencart\Model\Entity\MarketingReport[] patchEntities($entities, array $data, array $options = [])
  * @method \CakePHPOpencart\Model\Entity\MarketingReport findOrCreate($search, callable $callback = null, $options = [])
  */
-class MarketingReportsTable extends Table
+class MarketingReportsTable extends \CakePHPOpencart\Model\Table\OpencartAbstract\AbstractMarketingReportsTable
 {
     /**
      * Initialize method

@@ -3,7 +3,6 @@ namespace CakePHPOpencart\Model\Table\Opencart2;
 
 use Cake\ORM\Query;
 use Cake\ORM\RulesChecker;
-use Cake\ORM\Table;
 use Cake\Validation\Validator;
 
 /**
@@ -20,7 +19,7 @@ use Cake\Validation\Validator;
  * @method \CakePHPOpencart\Model\Entity\AffiliateActivity[] patchEntities($entities, array $data, array $options = [])
  * @method \CakePHPOpencart\Model\Entity\AffiliateActivity findOrCreate($search, callable $callback = null, $options = [])
  */
-class AffiliateActivitiesTable extends Table
+class AffiliateActivitiesTable extends \CakePHPOpencart\Model\Table\OpencartAbstract\AbstractAffiliateActivitiesTable
 {
     /**
      * Initialize method

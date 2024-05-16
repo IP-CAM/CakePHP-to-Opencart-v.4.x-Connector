@@ -3,7 +3,6 @@ namespace CakePHPOpencart\Model\Table\Opencart2;
 
 use Cake\ORM\Query;
 use Cake\ORM\RulesChecker;
-use Cake\ORM\Table;
 use Cake\Validation\Validator;
 
 /**
@@ -21,7 +20,7 @@ use Cake\Validation\Validator;
  * @method \CakePHPOpencart\Model\Entity\CategoryPath[] patchEntities($entities, array $data, array $options = [])
  * @method \CakePHPOpencart\Model\Entity\CategoryPath findOrCreate($search, callable $callback = null, $options = [])
  */
-class CategoryPathsTable extends Table
+class CategoryPathsTable extends \CakePHPOpencart\Model\Table\OpencartAbstract\AbstractCategoryPathsTable
 {
     /**
      * Initialize method

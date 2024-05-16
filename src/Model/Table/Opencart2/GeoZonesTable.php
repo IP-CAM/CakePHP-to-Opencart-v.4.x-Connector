@@ -3,7 +3,6 @@ namespace CakePHPOpencart\Model\Table\Opencart2;
 
 use Cake\ORM\Query;
 use Cake\ORM\RulesChecker;
-use Cake\ORM\Table;
 use Cake\Validation\Validator;
 
 /**
@@ -18,7 +17,7 @@ use Cake\Validation\Validator;
  * @method \CakePHPOpencart\Model\Entity\GeoZone[] patchEntities($entities, array $data, array $options = [])
  * @method \CakePHPOpencart\Model\Entity\GeoZone findOrCreate($search, callable $callback = null, $options = [])
  */
-class GeoZonesTable extends Table
+class GeoZonesTable extends \CakePHPOpencart\Model\Table\OpencartAbstract\AbstractGeoZonesTable
 {
     /**
      * Initialize method

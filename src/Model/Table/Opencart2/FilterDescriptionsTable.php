@@ -3,7 +3,6 @@ namespace CakePHPOpencart\Model\Table\Opencart2;
 
 use Cake\ORM\Query;
 use Cake\ORM\RulesChecker;
-use Cake\ORM\Table;
 use Cake\Validation\Validator;
 
 /**
@@ -22,7 +21,7 @@ use Cake\Validation\Validator;
  * @method \CakePHPOpencart\Model\Entity\FilterDescription[] patchEntities($entities, array $data, array $options = [])
  * @method \CakePHPOpencart\Model\Entity\FilterDescription findOrCreate($search, callable $callback = null, $options = [])
  */
-class FilterDescriptionsTable extends Table
+class FilterDescriptionsTable extends \CakePHPOpencart\Model\Table\OpencartAbstract\AbstractFilterDescriptionsTable
 {
     /**
      * Initialize method

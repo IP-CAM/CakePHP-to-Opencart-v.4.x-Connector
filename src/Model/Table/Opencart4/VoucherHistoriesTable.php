@@ -3,7 +3,6 @@ namespace CakePHPOpencart\Model\Table\Opencart4;
 
 use Cake\ORM\Query;
 use Cake\ORM\RulesChecker;
-use Cake\ORM\Table;
 use Cake\Validation\Validator;
 
 /**
@@ -21,7 +20,7 @@ use Cake\Validation\Validator;
  * @method \CakePHPOpencart\Model\Entity\VoucherHistory[] patchEntities($entities, array $data, array $options = [])
  * @method \CakePHPOpencart\Model\Entity\VoucherHistory findOrCreate($search, callable $callback = null, $options = [])
  */
-class VoucherHistoriesTable extends Table
+class VoucherHistoriesTable extends \CakePHPOpencart\Model\Table\OpencartAbstract\AbstractVoucherHistoriesTable
 {
     /**
      * Initialize method

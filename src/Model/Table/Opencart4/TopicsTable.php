@@ -3,7 +3,6 @@ namespace CakePHPOpencart\Model\Table\Opencart4;
 
 use Cake\ORM\Query;
 use Cake\ORM\RulesChecker;
-use Cake\ORM\Table;
 use Cake\Validation\Validator;
 
 /**
@@ -18,7 +17,7 @@ use Cake\Validation\Validator;
  * @method \CakePHPOpencart\Model\Entity\Topic[] patchEntities($entities, array $data, array $options = [])
  * @method \CakePHPOpencart\Model\Entity\Topic findOrCreate($search, callable $callback = null, $options = [])
  */
-class TopicsTable extends Table
+class TopicsTable extends \CakePHPOpencart\Model\Table\OpencartAbstract\AbstractTopicsTable
 {
     /**
      * Initialize method

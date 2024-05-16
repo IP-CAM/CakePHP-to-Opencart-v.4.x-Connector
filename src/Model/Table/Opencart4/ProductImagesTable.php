@@ -3,7 +3,6 @@ namespace CakePHPOpencart\Model\Table\Opencart4;
 
 use Cake\ORM\Query;
 use Cake\ORM\RulesChecker;
-use Cake\ORM\Table;
 use Cake\Validation\Validator;
 
 /**
@@ -20,7 +19,7 @@ use Cake\Validation\Validator;
  * @method \CakePHPOpencart\Model\Entity\ProductImage[] patchEntities($entities, array $data, array $options = [])
  * @method \CakePHPOpencart\Model\Entity\ProductImage findOrCreate($search, callable $callback = null, $options = [])
  */
-class ProductImagesTable extends Table
+class ProductImagesTable extends \CakePHPOpencart\Model\Table\OpencartAbstract\AbstractProductImagesTable
 {
     /**
      * Initialize method

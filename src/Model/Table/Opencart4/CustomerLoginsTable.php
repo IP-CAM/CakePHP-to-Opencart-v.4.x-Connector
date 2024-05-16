@@ -3,7 +3,6 @@ namespace CakePHPOpencart\Model\Table\Opencart4;
 
 use Cake\ORM\Query;
 use Cake\ORM\RulesChecker;
-use Cake\ORM\Table;
 use Cake\Validation\Validator;
 
 /**
@@ -18,7 +17,7 @@ use Cake\Validation\Validator;
  * @method \CakePHPOpencart\Model\Entity\CustomerLogin[] patchEntities($entities, array $data, array $options = [])
  * @method \CakePHPOpencart\Model\Entity\CustomerLogin findOrCreate($search, callable $callback = null, $options = [])
  */
-class CustomerLoginsTable extends Table
+class CustomerLoginsTable extends \CakePHPOpencart\Model\Table\OpencartAbstract\AbstractCustomerLoginsTable
 {
     /**
      * Initialize method

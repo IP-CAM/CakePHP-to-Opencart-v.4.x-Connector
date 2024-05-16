@@ -3,7 +3,6 @@ namespace CakePHPOpencart\Model\Table\Opencart2;
 
 use Cake\ORM\Query;
 use Cake\ORM\RulesChecker;
-use Cake\ORM\Table;
 use Cake\Validation\Validator;
 
 /**
@@ -18,7 +17,7 @@ use Cake\Validation\Validator;
  * @method \CakePHPOpencart\Model\Entity\UserGroup[] patchEntities($entities, array $data, array $options = [])
  * @method \CakePHPOpencart\Model\Entity\UserGroup findOrCreate($search, callable $callback = null, $options = [])
  */
-class UserGroupsTable extends Table
+class UserGroupsTable extends \CakePHPOpencart\Model\Table\OpencartAbstract\AbstractUserGroupsTable
 {
     /**
      * Initialize method

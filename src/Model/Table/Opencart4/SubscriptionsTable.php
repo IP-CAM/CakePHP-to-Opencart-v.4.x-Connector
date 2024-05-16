@@ -3,7 +3,6 @@ namespace CakePHPOpencart\Model\Table\Opencart4;
 
 use Cake\ORM\Query;
 use Cake\ORM\RulesChecker;
-use Cake\ORM\Table;
 use Cake\Validation\Validator;
 
 /**
@@ -34,7 +33,7 @@ use Cake\Validation\Validator;
  * @method \CakePHPOpencart\Model\Entity\Subscription[] patchEntities($entities, array $data, array $options = [])
  * @method \CakePHPOpencart\Model\Entity\Subscription findOrCreate($search, callable $callback = null, $options = [])
  */
-class SubscriptionsTable extends Table
+class SubscriptionsTable extends \CakePHPOpencart\Model\Table\OpencartAbstract\AbstractSubscriptionsTable
 {
     /**
      * Initialize method

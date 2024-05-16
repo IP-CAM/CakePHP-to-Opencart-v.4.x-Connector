@@ -3,7 +3,6 @@ namespace CakePHPOpencart\Model\Table\Opencart4;
 
 use Cake\ORM\Query;
 use Cake\ORM\RulesChecker;
-use Cake\ORM\Table;
 use Cake\Validation\Validator;
 
 /**
@@ -21,7 +20,7 @@ use Cake\Validation\Validator;
  * @method \CakePHPOpencart\Model\Entity\ProductSpecial[] patchEntities($entities, array $data, array $options = [])
  * @method \CakePHPOpencart\Model\Entity\ProductSpecial findOrCreate($search, callable $callback = null, $options = [])
  */
-class ProductSpecialsTable extends Table
+class ProductSpecialsTable extends \CakePHPOpencart\Model\Table\OpencartAbstract\AbstractProductSpecialsTable
 {
     /**
      * Initialize method
