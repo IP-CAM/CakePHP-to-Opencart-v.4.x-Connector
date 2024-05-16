@@ -11,7 +11,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart2;
  * @property \Cake\I18n\FrozenTime $date_added
  * @property \Cake\I18n\FrozenTime $date_modified
  */
-class Api extends \CakePHPOpencart\Model\Entity\OpencartCommon\Api
+class Api extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractApi
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

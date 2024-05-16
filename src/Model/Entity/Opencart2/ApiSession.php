@@ -16,7 +16,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart2;
  * @property \CakePHPOpencart\Model\Entity\Opencart2\Api $api
  * @property \CakePHPOpencart\Model\Entity\Opencart2\Session $session
  */
-class ApiSession extends \CakePHPOpencart\Model\Entity\OpencartCommon\ApiSession
+class ApiSession extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractApiSession
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

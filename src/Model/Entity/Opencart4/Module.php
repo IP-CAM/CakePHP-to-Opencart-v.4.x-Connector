@@ -11,7 +11,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart4;
  *
  * @property \CakePHPOpencart\Model\Entity\Opencart4\Layout[] $layout
  */
-class Module extends \CakePHPOpencart\Model\Entity\OpencartCommon\Module
+class Module extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractModule
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

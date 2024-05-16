@@ -10,7 +10,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart2;
  * @property \Cake\I18n\FrozenTime $date_modified
  * @property \Cake\I18n\FrozenTime $date_added
  */
-class GeoZone extends \CakePHPOpencart\Model\Entity\OpencartCommon\GeoZone
+class GeoZone extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractGeoZone
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

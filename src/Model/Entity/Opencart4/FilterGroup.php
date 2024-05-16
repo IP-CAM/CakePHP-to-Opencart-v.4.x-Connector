@@ -7,7 +7,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart4;
  * @property int $filter_group_id
  * @property int $sort_order
  */
-class FilterGroup extends \CakePHPOpencart\Model\Entity\OpencartCommon\FilterGroup
+class FilterGroup extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractFilterGroup
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

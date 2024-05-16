@@ -10,7 +10,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart2;
  * @property \CakePHPOpencart\Model\Entity\Opencart2\Coupon $coupon
  * @property \CakePHPOpencart\Model\Entity\Opencart2\Category $category
  */
-class CouponCategory extends \CakePHPOpencart\Model\Entity\OpencartCommon\CouponCategory
+class CouponCategory extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractCouponCategory
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

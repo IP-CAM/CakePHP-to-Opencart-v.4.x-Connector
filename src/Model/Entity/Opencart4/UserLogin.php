@@ -12,7 +12,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart4;
  *
  * @property \CakePHPOpencart\Model\Entity\Opencart4\User $user
  */
-class UserLogin extends \CakePHPOpencart\Model\Entity\OpencartCommon\UserLogin
+class UserLogin extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractUserLogin
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

@@ -19,7 +19,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart4;
  * @property \CakePHPOpencart\Model\Entity\Opencart4\Filter[] $filter
  * @property \CakePHPOpencart\Model\Entity\Opencart4\Coupon[] $coupon
  */
-class Category extends \CakePHPOpencart\Model\Entity\OpencartCommon\Category
+class Category extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractCategory
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

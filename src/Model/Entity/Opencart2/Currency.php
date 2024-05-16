@@ -14,7 +14,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart2;
  * @property bool $status
  * @property \Cake\I18n\FrozenTime $date_modified
  */
-class Currency extends \CakePHPOpencart\Model\Entity\OpencartCommon\Currency
+class Currency extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractCurrency
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

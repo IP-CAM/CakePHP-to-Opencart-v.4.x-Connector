@@ -10,7 +10,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart4;
  * @property bool $status
  * @property int $sort_order
  */
-class Startup extends \CakePHPOpencart\Model\Entity\OpencartCommon\Startup
+class Startup extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractStartup
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

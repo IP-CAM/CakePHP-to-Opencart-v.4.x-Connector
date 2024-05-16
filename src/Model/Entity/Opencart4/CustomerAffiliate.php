@@ -23,7 +23,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart4;
  * @property bool $status
  * @property \Cake\I18n\FrozenTime $date_added
  */
-class CustomerAffiliate extends \CakePHPOpencart\Model\Entity\OpencartCommon\CustomerAffiliate
+class CustomerAffiliate extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractCustomerAffiliate
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

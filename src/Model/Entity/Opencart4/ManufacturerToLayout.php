@@ -12,7 +12,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart4;
  * @property \CakePHPOpencart\Model\Entity\Opencart4\Store $store
  * @property \CakePHPOpencart\Model\Entity\Opencart4\Layout $layout
  */
-class ManufacturerToLayout extends \CakePHPOpencart\Model\Entity\OpencartCommon\ManufacturerToLayout
+class ManufacturerToLayout extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractManufacturerToLayout
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

@@ -10,7 +10,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart2;
  * @property \CakePHPOpencart\Model\Entity\Opencart2\Category $category
  * @property \CakePHPOpencart\Model\Entity\Opencart2\Filter $filter
  */
-class CategoryFilter extends \CakePHPOpencart\Model\Entity\OpencartCommon\CategoryFilter
+class CategoryFilter extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractCategoryFilter
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

@@ -12,7 +12,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart4;
  * @property bool $status
  * @property int $sort_order
  */
-class Event extends \CakePHPOpencart\Model\Entity\OpencartCommon\Event
+class Event extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractEvent
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

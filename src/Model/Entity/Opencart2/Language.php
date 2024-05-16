@@ -13,7 +13,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart2;
  * @property int $sort_order
  * @property bool $status
  */
-class Language extends \CakePHPOpencart\Model\Entity\OpencartCommon\Language
+class Language extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractLanguage
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

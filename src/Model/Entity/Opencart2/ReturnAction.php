@@ -11,7 +11,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart2;
  * @property \CakePHPOpencart\Model\Entity\Opencart2\ReturnAction $return_action
  * @property \CakePHPOpencart\Model\Entity\Opencart2\Language $language
  */
-class ReturnAction extends \CakePHPOpencart\Model\Entity\OpencartCommon\ReturnAction
+class ReturnAction extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractReturnAction
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

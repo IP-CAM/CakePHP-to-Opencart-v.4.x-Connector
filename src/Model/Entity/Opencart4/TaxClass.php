@@ -10,7 +10,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart4;
  * @property \Cake\I18n\FrozenTime $date_added
  * @property \Cake\I18n\FrozenTime $date_modified
  */
-class TaxClass extends \CakePHPOpencart\Model\Entity\OpencartCommon\TaxClass
+class TaxClass extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractTaxClass
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

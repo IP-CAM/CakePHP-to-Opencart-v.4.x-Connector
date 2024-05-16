@@ -8,7 +8,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart2;
  * @property string $name
  * @property bool $status
  */
-class Banner extends \CakePHPOpencart\Model\Entity\OpencartCommon\Banner
+class Banner extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractBanner
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

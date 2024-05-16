@@ -10,7 +10,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart4;
  * @property \CakePHPOpencart\Model\Entity\Opencart4\TaxRate $tax_rate
  * @property \CakePHPOpencart\Model\Entity\Opencart4\CustomerGroup $customer_group
  */
-class TaxRateToCustomerGroup extends \CakePHPOpencart\Model\Entity\OpencartCommon\TaxRateToCustomerGroup
+class TaxRateToCustomerGroup extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractTaxRateToCustomerGroup
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

@@ -8,7 +8,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart4;
  * @property string $code
  * @property float $value
  */
-class Statistic extends \CakePHPOpencart\Model\Entity\OpencartCommon\Statistic
+class Statistic extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractStatistic
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

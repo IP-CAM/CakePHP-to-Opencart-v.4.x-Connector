@@ -15,7 +15,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart4;
  * @property \CakePHPOpencart\Model\Entity\Opencart4\Store $store
  * @property \CakePHPOpencart\Model\Entity\Opencart4\Language $language
  */
-class SeoUrl extends \CakePHPOpencart\Model\Entity\OpencartCommon\SeoUrl
+class SeoUrl extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractSeoUrl
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

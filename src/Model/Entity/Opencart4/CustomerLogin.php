@@ -11,7 +11,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart4;
  * @property \Cake\I18n\FrozenTime $date_added
  * @property \Cake\I18n\FrozenTime $date_modified
  */
-class CustomerLogin extends \CakePHPOpencart\Model\Entity\OpencartCommon\CustomerLogin
+class CustomerLogin extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractCustomerLogin
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

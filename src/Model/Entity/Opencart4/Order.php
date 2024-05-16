@@ -84,7 +84,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart4;
  * @property \CakePHPOpencart\Model\Entity\Opencart4\Product[] $product
  * @property \CakePHPOpencart\Model\Entity\Opencart4\Voucher[] $voucher
  */
-class Order extends \CakePHPOpencart\Model\Entity\OpencartCommon\Order
+class Order extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractOrder
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

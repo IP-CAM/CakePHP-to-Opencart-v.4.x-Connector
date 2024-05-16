@@ -11,7 +11,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart2;
  *
  * @property \CakePHPOpencart\Model\Entity\Opencart2\Product $product
  */
-class ProductImage extends \CakePHPOpencart\Model\Entity\OpencartCommon\ProductImage
+class ProductImage extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractProductImage
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

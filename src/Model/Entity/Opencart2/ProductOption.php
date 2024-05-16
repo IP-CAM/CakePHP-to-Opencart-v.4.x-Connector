@@ -13,7 +13,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart2;
  * @property \CakePHPOpencart\Model\Entity\Opencart2\Product $product
  * @property \CakePHPOpencart\Model\Entity\Opencart2\Option $option
  */
-class ProductOption extends \CakePHPOpencart\Model\Entity\OpencartCommon\ProductOption
+class ProductOption extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractProductOption
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

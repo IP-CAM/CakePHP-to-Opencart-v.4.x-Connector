@@ -12,7 +12,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart2;
  * @property \CakePHPOpencart\Model\Entity\Opencart2\Recurring $recurring
  * @property \CakePHPOpencart\Model\Entity\Opencart2\CustomerGroup $customer_group
  */
-class ProductRecurring extends \CakePHPOpencart\Model\Entity\OpencartCommon\ProductRecurring
+class ProductRecurring extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractProductRecurring
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

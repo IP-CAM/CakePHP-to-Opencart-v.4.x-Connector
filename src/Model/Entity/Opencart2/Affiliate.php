@@ -39,7 +39,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart2;
  * @property \CakePHPOpencart\Model\Entity\Opencart2\Country $country
  * @property \CakePHPOpencart\Model\Entity\Opencart2\Zone $zone
  */
-class Affiliate extends \CakePHPOpencart\Model\Entity\OpencartCommon\Affiliate
+class Affiliate extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractAffiliate
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

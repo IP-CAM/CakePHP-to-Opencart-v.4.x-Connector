@@ -14,7 +14,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart4;
  * @property \CakePHPOpencart\Model\Entity\Opencart4\Return $return
  * @property \CakePHPOpencart\Model\Entity\Opencart4\ReturnStatus $return_status
  */
-class ReturnHistory extends \CakePHPOpencart\Model\Entity\OpencartCommon\ReturnHistory
+class ReturnHistory extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractReturnHistory
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

@@ -79,7 +79,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart2;
  * @property \CakePHPOpencart\Model\Entity\Opencart2\Recurring[] $recurring
  * @property \CakePHPOpencart\Model\Entity\Opencart2\Voucher[] $voucher
  */
-class Order extends \CakePHPOpencart\Model\Entity\OpencartCommon\Order
+class Order extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractOrder
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

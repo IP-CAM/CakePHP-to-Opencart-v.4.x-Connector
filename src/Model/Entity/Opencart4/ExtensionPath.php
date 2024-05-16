@@ -10,7 +10,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart4;
  *
  * @property \CakePHPOpencart\Model\Entity\Opencart4\ExtensionInstall $extension_install
  */
-class ExtensionPath extends \CakePHPOpencart\Model\Entity\OpencartCommon\ExtensionPath
+class ExtensionPath extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractExtensionPath
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

@@ -22,7 +22,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart2;
  * @property \CakePHPOpencart\Model\Entity\Opencart2\Category[] $category
  * @property \CakePHPOpencart\Model\Entity\Opencart2\Product[] $product
  */
-class Coupon extends \CakePHPOpencart\Model\Entity\OpencartCommon\Coupon
+class Coupon extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractCoupon
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

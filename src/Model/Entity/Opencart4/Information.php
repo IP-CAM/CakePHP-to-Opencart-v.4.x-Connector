@@ -9,7 +9,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart4;
  * @property int $sort_order
  * @property bool $status
  */
-class Information extends \CakePHPOpencart\Model\Entity\OpencartCommon\Information
+class Information extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractInformation
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

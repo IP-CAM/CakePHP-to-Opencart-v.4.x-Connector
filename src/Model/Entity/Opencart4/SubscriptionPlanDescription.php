@@ -11,7 +11,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart4;
  * @property \CakePHPOpencart\Model\Entity\Opencart4\SubscriptionPlan $subscription_plan
  * @property \CakePHPOpencart\Model\Entity\Opencart4\Language $language
  */
-class SubscriptionPlanDescription extends \CakePHPOpencart\Model\Entity\OpencartCommon\SubscriptionPlanDescription
+class SubscriptionPlanDescription extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractSubscriptionPlanDescription
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

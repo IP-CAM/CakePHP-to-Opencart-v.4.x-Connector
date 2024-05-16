@@ -11,7 +11,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart4;
  * @property \CakePHPOpencart\Model\Entity\Opencart4\AttributeGroup $attribute_group
  * @property \CakePHPOpencart\Model\Entity\Opencart4\Language $language
  */
-class AttributeGroupDescription extends \CakePHPOpencart\Model\Entity\OpencartCommon\AttributeGroupDescription
+class AttributeGroupDescription extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractAttributeGroupDescription
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

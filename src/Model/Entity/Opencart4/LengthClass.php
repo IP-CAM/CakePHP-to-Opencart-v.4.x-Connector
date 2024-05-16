@@ -7,7 +7,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart4;
  * @property int $length_class_id
  * @property float $value
  */
-class LengthClass extends \CakePHPOpencart\Model\Entity\OpencartCommon\LengthClass
+class LengthClass extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractLengthClass
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

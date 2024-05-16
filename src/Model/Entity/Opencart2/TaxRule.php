@@ -13,7 +13,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart2;
  * @property \CakePHPOpencart\Model\Entity\Opencart2\TaxClass $tax_class
  * @property \CakePHPOpencart\Model\Entity\Opencart2\TaxRate $tax_rate
  */
-class TaxRule extends \CakePHPOpencart\Model\Entity\OpencartCommon\TaxRule
+class TaxRule extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractTaxRule
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

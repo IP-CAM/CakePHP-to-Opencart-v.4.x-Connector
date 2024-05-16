@@ -7,7 +7,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart4;
  * @property int $product_id
  * @property int $viewed
  */
-class ProductViewed extends \CakePHPOpencart\Model\Entity\OpencartCommon\ProductViewed
+class ProductViewed extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractProductViewed
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

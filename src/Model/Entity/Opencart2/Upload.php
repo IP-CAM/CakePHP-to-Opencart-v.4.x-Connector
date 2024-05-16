@@ -10,7 +10,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart2;
  * @property string $code
  * @property \Cake\I18n\FrozenTime $date_added
  */
-class Upload extends \CakePHPOpencart\Model\Entity\OpencartCommon\Upload
+class Upload extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractUpload
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

@@ -15,7 +15,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart4;
  * @property \CakePHPOpencart\Model\Entity\Opencart4\Zone $zone
  * @property \CakePHPOpencart\Model\Entity\Opencart4\GeoZone $geo_zone
  */
-class ZoneToGeoZone extends \CakePHPOpencart\Model\Entity\OpencartCommon\ZoneToGeoZone
+class ZoneToGeoZone extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractZoneToGeoZone
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

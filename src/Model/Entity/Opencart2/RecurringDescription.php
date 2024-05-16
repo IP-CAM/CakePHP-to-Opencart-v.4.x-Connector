@@ -11,7 +11,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart2;
  * @property \CakePHPOpencart\Model\Entity\Opencart2\Recurring $recurring
  * @property \CakePHPOpencart\Model\Entity\Opencart2\Language $language
  */
-class RecurringDescription extends \CakePHPOpencart\Model\Entity\OpencartCommon\RecurringDescription
+class RecurringDescription extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractRecurringDescription
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

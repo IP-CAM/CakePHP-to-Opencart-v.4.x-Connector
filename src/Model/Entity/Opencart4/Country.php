@@ -14,7 +14,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart4;
  *
  * @property \CakePHPOpencart\Model\Entity\Opencart4\AddressFormat $address_format
  */
-class Country extends \CakePHPOpencart\Model\Entity\OpencartCommon\Country
+class Country extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractCountry
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

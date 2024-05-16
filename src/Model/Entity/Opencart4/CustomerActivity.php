@@ -13,7 +13,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart4;
  *
  * @property \CakePHPOpencart\Model\Entity\Opencart4\Customer $customer
  */
-class CustomerActivity extends \CakePHPOpencart\Model\Entity\OpencartCommon\CustomerActivity
+class CustomerActivity extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractCustomerActivity
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

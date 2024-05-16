@@ -13,7 +13,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart4;
  *
  * @property \CakePHPOpencart\Model\Entity\Opencart4\Topic $topic
  */
-class Article extends \CakePHPOpencart\Model\Entity\OpencartCommon\Article
+class Article extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractArticle
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

@@ -10,7 +10,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart4;
  * @property \CakePHPOpencart\Model\Entity\Opencart4\Product $product
  * @property \CakePHPOpencart\Model\Entity\Opencart4\Related $related
  */
-class ProductRelated extends \CakePHPOpencart\Model\Entity\OpencartCommon\ProductRelated
+class ProductRelated extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractProductRelated
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

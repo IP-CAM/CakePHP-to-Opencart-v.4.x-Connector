@@ -15,7 +15,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart4;
  * @property bool $status
  * @property int $sort_order
  */
-class SubscriptionPlan extends \CakePHPOpencart\Model\Entity\OpencartCommon\SubscriptionPlan
+class SubscriptionPlan extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractSubscriptionPlan
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

@@ -10,7 +10,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart2;
  * @property \CakePHPOpencart\Model\Entity\Opencart2\Product $product
  * @property \CakePHPOpencart\Model\Entity\Opencart2\Download $download
  */
-class ProductToDownload extends \CakePHPOpencart\Model\Entity\OpencartCommon\ProductToDownload
+class ProductToDownload extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractProductToDownload
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

@@ -12,7 +12,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart2;
  * @property \CakePHPOpencart\Model\Entity\Opencart2\CustomerGroup $customer_group
  * @property \CakePHPOpencart\Model\Entity\Opencart2\Language $language
  */
-class CustomerGroupDescription extends \CakePHPOpencart\Model\Entity\OpencartCommon\CustomerGroupDescription
+class CustomerGroupDescription extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractCustomerGroupDescription
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

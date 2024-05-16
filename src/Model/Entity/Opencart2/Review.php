@@ -17,7 +17,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart2;
  * @property \CakePHPOpencart\Model\Entity\Opencart2\Product $product
  * @property \CakePHPOpencart\Model\Entity\Opencart2\Customer $customer
  */
-class Review extends \CakePHPOpencart\Model\Entity\OpencartCommon\Review
+class Review extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractReview
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

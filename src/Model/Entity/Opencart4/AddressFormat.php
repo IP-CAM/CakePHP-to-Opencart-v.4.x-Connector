@@ -8,7 +8,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart4;
  * @property string $name
  * @property string $address_format
  */
-class AddressFormat extends \CakePHPOpencart\Model\Entity\OpencartCommon\AddressFormat
+class AddressFormat extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractAddressFormat
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

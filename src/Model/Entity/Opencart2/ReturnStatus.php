@@ -11,7 +11,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart2;
  * @property \CakePHPOpencart\Model\Entity\Opencart2\ReturnStatus $return_status
  * @property \CakePHPOpencart\Model\Entity\Opencart2\Language $language
  */
-class ReturnStatus extends \CakePHPOpencart\Model\Entity\OpencartCommon\ReturnStatus
+class ReturnStatus extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractReturnStatus
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

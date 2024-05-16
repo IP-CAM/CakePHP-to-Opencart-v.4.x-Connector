@@ -11,7 +11,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart4;
  * @property \CakePHPOpencart\Model\Entity\Opencart4\AttributeGroup $attribute_group
  * @property \CakePHPOpencart\Model\Entity\Opencart4\Product[] $product
  */
-class Attribute extends \CakePHPOpencart\Model\Entity\OpencartCommon\Attribute
+class Attribute extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractAttribute
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

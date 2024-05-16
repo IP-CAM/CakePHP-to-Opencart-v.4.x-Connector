@@ -11,7 +11,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart4;
  * @property \CakePHPOpencart\Model\Entity\Opencart4\Download $download
  * @property \CakePHPOpencart\Model\Entity\Opencart4\Language $language
  */
-class DownloadDescription extends \CakePHPOpencart\Model\Entity\OpencartCommon\DownloadDescription
+class DownloadDescription extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractDownloadDescription
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

@@ -11,7 +11,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart2;
  *
  * @property \CakePHPOpencart\Model\Entity\Opencart2\Menu $menu
  */
-class MenuModule extends \CakePHPOpencart\Model\Entity\OpencartCommon\MenuModule
+class MenuModule extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractMenuModule
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

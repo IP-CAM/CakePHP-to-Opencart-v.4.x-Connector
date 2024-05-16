@@ -14,7 +14,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart2;
  *
  * @property \CakePHPOpencart\Model\Entity\Opencart2\GeoZone $geo_zone
  */
-class TaxRate extends \CakePHPOpencart\Model\Entity\OpencartCommon\TaxRate
+class TaxRate extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractTaxRate
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

@@ -12,7 +12,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart2;
  * @property \CakePHPOpencart\Model\Entity\Opencart2\WeightClass $weight_class
  * @property \CakePHPOpencart\Model\Entity\Opencart2\Language $language
  */
-class WeightClassDescription extends \CakePHPOpencart\Model\Entity\OpencartCommon\WeightClassDescription
+class WeightClassDescription extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractWeightClassDescription
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

@@ -14,7 +14,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart4;
  * @property \CakePHPOpencart\Model\Entity\Opencart4\Subscription $subscription
  * @property \CakePHPOpencart\Model\Entity\Opencart4\SubscriptionStatus $subscription_status
  */
-class SubscriptionHistory extends \CakePHPOpencart\Model\Entity\OpencartCommon\SubscriptionHistory
+class SubscriptionHistory extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractSubscriptionHistory
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

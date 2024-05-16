@@ -30,7 +30,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart2;
  * @property \CakePHPOpencart\Model\Entity\Opencart2\ReturnAction $return_action
  * @property \CakePHPOpencart\Model\Entity\Opencart2\ReturnStatus $return_status
  */
-class Return extends \CakePHPOpencart\Model\Entity\OpencartCommon\Return
+class Return extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractReturn
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

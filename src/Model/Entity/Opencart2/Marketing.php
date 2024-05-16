@@ -11,7 +11,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart2;
  * @property int $clicks
  * @property \Cake\I18n\FrozenTime $date_added
  */
-class Marketing extends \CakePHPOpencart\Model\Entity\OpencartCommon\Marketing
+class Marketing extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractMarketing
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

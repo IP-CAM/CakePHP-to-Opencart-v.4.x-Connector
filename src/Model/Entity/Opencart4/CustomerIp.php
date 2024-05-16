@@ -14,7 +14,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart4;
  * @property \CakePHPOpencart\Model\Entity\Opencart4\Customer $customer
  * @property \CakePHPOpencart\Model\Entity\Opencart4\Store $store
  */
-class CustomerIp extends \CakePHPOpencart\Model\Entity\OpencartCommon\CustomerIp
+class CustomerIp extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractCustomerIp
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

@@ -13,7 +13,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart4;
  * @property \Cake\I18n\FrozenTime $date_added
  * @property \Cake\I18n\FrozenTime $date_modified
  */
-class Cron extends \CakePHPOpencart\Model\Entity\OpencartCommon\Cron
+class Cron extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractCron
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

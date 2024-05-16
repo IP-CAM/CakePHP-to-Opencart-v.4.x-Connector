@@ -56,7 +56,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart4;
  * @property \CakePHPOpencart\Model\Entity\Opencart4\Language $language
  * @property \CakePHPOpencart\Model\Entity\Opencart4\Currency $currency
  */
-class Subscription extends \CakePHPOpencart\Model\Entity\OpencartCommon\Subscription
+class Subscription extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractSubscription
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

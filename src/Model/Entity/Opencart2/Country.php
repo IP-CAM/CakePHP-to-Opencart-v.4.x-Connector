@@ -12,7 +12,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart2;
  * @property bool $postcode_required
  * @property bool $status
  */
-class Country extends \CakePHPOpencart\Model\Entity\OpencartCommon\Country
+class Country extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractCountry
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

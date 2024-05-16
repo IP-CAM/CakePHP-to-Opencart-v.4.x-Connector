@@ -8,7 +8,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart4;
  * @property int $sort_order
  * @property bool $status
  */
-class Topic extends \CakePHPOpencart\Model\Entity\OpencartCommon\Topic
+class Topic extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractTopic
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

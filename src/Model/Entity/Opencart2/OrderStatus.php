@@ -11,7 +11,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart2;
  * @property \CakePHPOpencart\Model\Entity\Opencart2\OrderStatus $order_status
  * @property \CakePHPOpencart\Model\Entity\Opencart2\Language $language
  */
-class OrderStatus extends \CakePHPOpencart\Model\Entity\OpencartCommon\OrderStatus
+class OrderStatus extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractOrderStatus
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

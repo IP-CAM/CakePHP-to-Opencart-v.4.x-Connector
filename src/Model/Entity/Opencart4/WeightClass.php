@@ -7,7 +7,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart4;
  * @property int $weight_class_id
  * @property float $value
  */
-class WeightClass extends \CakePHPOpencart\Model\Entity\OpencartCommon\WeightClass
+class WeightClass extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractWeightClass
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

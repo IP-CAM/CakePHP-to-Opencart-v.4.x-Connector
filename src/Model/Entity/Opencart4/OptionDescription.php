@@ -11,7 +11,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart4;
  * @property \CakePHPOpencart\Model\Entity\Opencart4\Option $option
  * @property \CakePHPOpencart\Model\Entity\Opencart4\Language $language
  */
-class OptionDescription extends \CakePHPOpencart\Model\Entity\OpencartCommon\OptionDescription
+class OptionDescription extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractOptionDescription
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

@@ -11,7 +11,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart4;
  * @property \CakePHPOpencart\Model\Entity\Opencart4\StockStatus $stock_status
  * @property \CakePHPOpencart\Model\Entity\Opencart4\Language $language
  */
-class StockStatus extends \CakePHPOpencart\Model\Entity\OpencartCommon\StockStatus
+class StockStatus extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractStockStatus
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

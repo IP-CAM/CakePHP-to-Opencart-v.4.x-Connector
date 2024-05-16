@@ -13,7 +13,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart2;
  * @property \CakePHPOpencart\Model\Entity\Opencart2\Language $language
  * @property \CakePHPOpencart\Model\Entity\Opencart2\FilterGroup $filter_group
  */
-class FilterDescription extends \CakePHPOpencart\Model\Entity\OpencartCommon\FilterDescription
+class FilterDescription extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractFilterDescription
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

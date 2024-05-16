@@ -20,7 +20,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart2;
  * @property \CakePHPOpencart\Model\Entity\Opencart2\Order[] $order
  * @property \CakePHPOpencart\Model\Entity\Opencart2\Product[] $product
  */
-class Recurring extends \CakePHPOpencart\Model\Entity\OpencartCommon\Recurring
+class Recurring extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractRecurring
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

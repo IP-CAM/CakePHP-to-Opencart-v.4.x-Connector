@@ -10,7 +10,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart2;
  *
  * @property \CakePHPOpencart\Model\Entity\Opencart2\CustomField $custom_field
  */
-class CustomFieldValue extends \CakePHPOpencart\Model\Entity\OpencartCommon\CustomFieldValue
+class CustomFieldValue extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractCustomFieldValue
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

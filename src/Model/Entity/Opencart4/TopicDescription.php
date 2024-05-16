@@ -16,7 +16,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart4;
  * @property \CakePHPOpencart\Model\Entity\Opencart4\Topic $topic
  * @property \CakePHPOpencart\Model\Entity\Opencart4\Language $language
  */
-class TopicDescription extends \CakePHPOpencart\Model\Entity\OpencartCommon\TopicDescription
+class TopicDescription extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractTopicDescription
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

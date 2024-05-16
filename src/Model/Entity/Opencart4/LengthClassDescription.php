@@ -12,7 +12,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart4;
  * @property \CakePHPOpencart\Model\Entity\Opencart4\LengthClass $length_class
  * @property \CakePHPOpencart\Model\Entity\Opencart4\Language $language
  */
-class LengthClassDescription extends \CakePHPOpencart\Model\Entity\OpencartCommon\LengthClassDescription
+class LengthClassDescription extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractLengthClassDescription
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

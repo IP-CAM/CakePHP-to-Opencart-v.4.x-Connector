@@ -9,7 +9,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart2;
  * @property string $url
  * @property string $ssl
  */
-class Store extends \CakePHPOpencart\Model\Entity\OpencartCommon\Store
+class Store extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractStore
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

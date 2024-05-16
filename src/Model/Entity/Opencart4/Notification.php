@@ -10,7 +10,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart4;
  * @property int $status
  * @property \Cake\I18n\FrozenTime $date_added
  */
-class Notification extends \CakePHPOpencart\Model\Entity\OpencartCommon\Notification
+class Notification extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractNotification
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

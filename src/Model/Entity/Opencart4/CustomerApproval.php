@@ -11,7 +11,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart4;
  *
  * @property \CakePHPOpencart\Model\Entity\Opencart4\Customer $customer
  */
-class CustomerApproval extends \CakePHPOpencart\Model\Entity\OpencartCommon\CustomerApproval
+class CustomerApproval extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractCustomerApproval
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

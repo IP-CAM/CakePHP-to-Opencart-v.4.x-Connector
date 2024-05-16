@@ -10,7 +10,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart2;
  *
  * @property \CakePHPOpencart\Model\Entity\Opencart2\Api $api
  */
-class ApiIp extends \CakePHPOpencart\Model\Entity\OpencartCommon\ApiIp
+class ApiIp extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractApiIp
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

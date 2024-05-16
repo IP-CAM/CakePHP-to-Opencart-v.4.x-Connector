@@ -49,7 +49,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart2;
  * @property \CakePHPOpencart\Model\Entity\Opencart2\OptionValue[] $option_value
  * @property \CakePHPOpencart\Model\Entity\Opencart2\Recurring[] $recurring
  */
-class Product extends \CakePHPOpencart\Model\Entity\OpencartCommon\Product
+class Product extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractProduct
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

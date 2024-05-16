@@ -11,7 +11,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart2;
  * @property \CakePHPOpencart\Model\Entity\Opencart2\ReturnReason $return_reason
  * @property \CakePHPOpencart\Model\Entity\Opencart2\Language $language
  */
-class ReturnReason extends \CakePHPOpencart\Model\Entity\OpencartCommon\ReturnReason
+class ReturnReason extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractReturnReason
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

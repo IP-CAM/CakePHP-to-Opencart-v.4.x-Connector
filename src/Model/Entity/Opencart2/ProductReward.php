@@ -12,7 +12,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart2;
  * @property \CakePHPOpencart\Model\Entity\Opencart2\Product $product
  * @property \CakePHPOpencart\Model\Entity\Opencart2\CustomerGroup $customer_group
  */
-class ProductReward extends \CakePHPOpencart\Model\Entity\OpencartCommon\ProductReward
+class ProductReward extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractProductReward
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

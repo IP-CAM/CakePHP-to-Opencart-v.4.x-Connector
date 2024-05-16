@@ -11,7 +11,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart4;
  * @property \CakePHPOpencart\Model\Entity\Opencart4\Category $category
  * @property \CakePHPOpencart\Model\Entity\Opencart4\Path $path
  */
-class CategoryPath extends \CakePHPOpencart\Model\Entity\OpencartCommon\CategoryPath
+class CategoryPath extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractCategoryPath
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

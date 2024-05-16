@@ -8,7 +8,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart4;
  * @property string $name
  * @property string $permission
  */
-class UserGroup extends \CakePHPOpencart\Model\Entity\OpencartCommon\UserGroup
+class UserGroup extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractUserGroup
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

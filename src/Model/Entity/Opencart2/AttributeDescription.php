@@ -11,7 +11,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart2;
  * @property \CakePHPOpencart\Model\Entity\Opencart2\Attribute $attribute
  * @property \CakePHPOpencart\Model\Entity\Opencart2\Language $language
  */
-class AttributeDescription extends \CakePHPOpencart\Model\Entity\OpencartCommon\AttributeDescription
+class AttributeDescription extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractAttributeDescription
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

@@ -11,7 +11,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart2;
  * @property \CakePHPOpencart\Model\Entity\Opencart2\CustomField $custom_field
  * @property \CakePHPOpencart\Model\Entity\Opencart2\Language $language
  */
-class CustomFieldDescription extends \CakePHPOpencart\Model\Entity\OpencartCommon\CustomFieldDescription
+class CustomFieldDescription extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractCustomFieldDescription
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

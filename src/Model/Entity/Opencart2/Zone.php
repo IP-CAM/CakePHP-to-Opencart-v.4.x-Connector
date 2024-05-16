@@ -12,7 +12,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart2;
  *
  * @property \CakePHPOpencart\Model\Entity\Opencart2\Country $country
  */
-class Zone extends \CakePHPOpencart\Model\Entity\OpencartCommon\Zone
+class Zone extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractZone
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

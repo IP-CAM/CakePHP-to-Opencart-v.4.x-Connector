@@ -21,7 +21,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart2;
  * @property \CakePHPOpencart\Model\Entity\Opencart2\Customer $customer
  * @property \CakePHPOpencart\Model\Entity\Opencart2\Category $category
  */
-class CustomerSearch extends \CakePHPOpencart\Model\Entity\OpencartCommon\CustomerSearch
+class CustomerSearch extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractCustomerSearch
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

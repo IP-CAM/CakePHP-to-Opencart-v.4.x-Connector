@@ -21,7 +21,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart2;
  * @property \CakePHPOpencart\Model\Entity\Opencart2\Country $country
  * @property \CakePHPOpencart\Model\Entity\Opencart2\Zone $zone
  */
-class Address extends \CakePHPOpencart\Model\Entity\OpencartCommon\Address
+class Address extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractAddress
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

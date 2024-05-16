@@ -7,7 +7,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart4;
  * @property int $attribute_group_id
  * @property int $sort_order
  */
-class AttributeGroup extends \CakePHPOpencart\Model\Entity\OpencartCommon\AttributeGroup
+class AttributeGroup extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractAttributeGroup
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

@@ -11,7 +11,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart2;
  * @property bool $status
  * @property \Cake\I18n\FrozenTime $date_added
  */
-class Event extends \CakePHPOpencart\Model\Entity\OpencartCommon\Event
+class Event extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractEvent
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

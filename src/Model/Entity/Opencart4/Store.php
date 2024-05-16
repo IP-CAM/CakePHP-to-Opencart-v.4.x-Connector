@@ -8,7 +8,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart4;
  * @property string $name
  * @property string $url
  */
-class Store extends \CakePHPOpencart\Model\Entity\OpencartCommon\Store
+class Store extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractStore
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

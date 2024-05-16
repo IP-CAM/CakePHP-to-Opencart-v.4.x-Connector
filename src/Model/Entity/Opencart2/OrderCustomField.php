@@ -17,7 +17,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart2;
  * @property \CakePHPOpencart\Model\Entity\Opencart2\CustomField $custom_field
  * @property \CakePHPOpencart\Model\Entity\Opencart2\CustomFieldValue $custom_field_value
  */
-class OrderCustomField extends \CakePHPOpencart\Model\Entity\OpencartCommon\OrderCustomField
+class OrderCustomField extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractOrderCustomField
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

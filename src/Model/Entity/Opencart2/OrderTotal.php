@@ -13,7 +13,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart2;
  *
  * @property \CakePHPOpencart\Model\Entity\Opencart2\Order $order
  */
-class OrderTotal extends \CakePHPOpencart\Model\Entity\OpencartCommon\OrderTotal
+class OrderTotal extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractOrderTotal
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

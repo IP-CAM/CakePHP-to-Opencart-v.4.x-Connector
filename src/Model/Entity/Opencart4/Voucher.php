@@ -21,7 +21,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart4;
  * @property \CakePHPOpencart\Model\Entity\Opencart4\VoucherTheme $voucher_theme
  * @property \CakePHPOpencart\Model\Entity\Opencart4\Theme[] $theme
  */
-class Voucher extends \CakePHPOpencart\Model\Entity\OpencartCommon\Voucher
+class Voucher extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractVoucher
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

@@ -11,7 +11,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart4;
  * @property \CakePHPOpencart\Model\Entity\Opencart4\Order[] $order
  * @property \CakePHPOpencart\Model\Entity\Opencart4\Product[] $product
  */
-class Option extends \CakePHPOpencart\Model\Entity\OpencartCommon\Option
+class Option extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractOption
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

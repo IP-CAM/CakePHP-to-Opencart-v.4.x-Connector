@@ -15,7 +15,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart2;
  * @property \CakePHPOpencart\Model\Entity\Opencart2\Order $order
  * @property \CakePHPOpencart\Model\Entity\Opencart2\Customer $customer
  */
-class CouponHistory extends \CakePHPOpencart\Model\Entity\OpencartCommon\CouponHistory
+class CouponHistory extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractCouponHistory
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

@@ -15,7 +15,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart2;
  * @property \CakePHPOpencart\Model\Entity\Opencart2\Banner $banner
  * @property \CakePHPOpencart\Model\Entity\Opencart2\Language $language
  */
-class BannerImage extends \CakePHPOpencart\Model\Entity\OpencartCommon\BannerImage
+class BannerImage extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractBannerImage
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

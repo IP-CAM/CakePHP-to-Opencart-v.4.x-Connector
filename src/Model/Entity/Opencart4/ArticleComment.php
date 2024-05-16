@@ -14,7 +14,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart4;
  * @property \CakePHPOpencart\Model\Entity\Opencart4\Article $article
  * @property \CakePHPOpencart\Model\Entity\Opencart4\Customer $customer
  */
-class ArticleComment extends \CakePHPOpencart\Model\Entity\OpencartCommon\ArticleComment
+class ArticleComment extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractArticleComment
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

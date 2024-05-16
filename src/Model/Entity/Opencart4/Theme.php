@@ -13,7 +13,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart4;
  * @property \CakePHPOpencart\Model\Entity\Opencart4\Store $store
  * @property \CakePHPOpencart\Model\Entity\Opencart4\Voucher[] $voucher
  */
-class Theme extends \CakePHPOpencart\Model\Entity\OpencartCommon\Theme
+class Theme extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractTheme
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

@@ -15,7 +15,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart4;
  * @property \CakePHPOpencart\Model\Entity\Opencart4\Store $store
  * @property \CakePHPOpencart\Model\Entity\Opencart4\Language $language
  */
-class Translation extends \CakePHPOpencart\Model\Entity\OpencartCommon\Translation
+class Translation extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractTranslation
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

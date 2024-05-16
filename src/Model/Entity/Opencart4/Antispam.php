@@ -7,7 +7,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart4;
  * @property int $antispam_id
  * @property string $keyword
  */
-class Antispam extends \CakePHPOpencart\Model\Entity\OpencartCommon\Antispam
+class Antispam extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractAntispam
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

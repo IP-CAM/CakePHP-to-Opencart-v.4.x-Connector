@@ -13,7 +13,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart4;
  * @property string $open
  * @property string $comment
  */
-class Location extends \CakePHPOpencart\Model\Entity\OpencartCommon\Location
+class Location extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractLocation
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().

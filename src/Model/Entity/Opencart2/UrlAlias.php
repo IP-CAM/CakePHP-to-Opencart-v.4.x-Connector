@@ -8,7 +8,7 @@ namespace CakePHPOpencart\Model\Entity\Opencart2;
  * @property string $query
  * @property string $keyword
  */
-class UrlAlias extends \CakePHPOpencart\Model\Entity\OpencartCommon\UrlAlias
+class UrlAlias extends \CakePHPOpencart\Model\Entity\OpencartAbstract\AbstractUrlAlias
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().
