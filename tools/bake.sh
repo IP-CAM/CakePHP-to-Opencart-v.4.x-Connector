@@ -30,8 +30,8 @@ T="${PLUGIN_PATH}/src/Model/Table"
 # Clean up
 rm -rf ${E}/Opencart${VER}
 mkdir -p ${E}/Opencart${VER}
-#rm -rf ${E}/OpencartCommon # DON'T. oc2 has some classes removed in oc4
-mkdir -p ${E}/OpencartCommon
+#rm -rf ${E}/OpencartAbstract # DON'T. oc2 has some classes removed in oc4
+mkdir -p ${E}/OpencartAbstract
 rm -rf ${T}/Opencart${VER}
 mkdir -p ${T}/Opencart${VER}
 
@@ -101,17 +101,17 @@ awk '
     mv "${E}/${ENTITY}.php" "${E}/Opencart${VER}/${ENTITY}.php"
     F="${E}/Opencart${VER}/${ENTITY}.php"
     sed -i "s/${PLUGIN}\\\Model\\\Entity/${PLUGIN}\\\Model\\\Entity\\\Opencart${VER}/g" "${F}"
-    # Entity: common
-    mkdir -p "${E}/OpencartCommon"
-    if [ ! -f "${E}/OpencartCommon/${ENTITY}.php" ]; then
-        cat > "${E}/OpencartCommon/${ENTITY}.php" << EOF
+    # Entity: Abstract
+    mkdir -p "${E}/OpencartAbstract"
+    if [ ! -f "${E}/OpencartAbstract/Abstract${ENTITY}.php" ]; then
+        cat > "${E}/OpencartAbstract/Abstract${ENTITY}.php" << EOF
 <?php
 
-namespace ${PLUGIN}\Model\Entity\OpencartCommon;
+namespace ${PLUGIN}\Model\Entity\OpencartAbstract;
 
 use Cake\ORM\Entity;
 
-class ${ENTITY} extends Entity
+abstract class Abstract${ENTITY} extends Entity
 {
 
 
@@ -119,7 +119,7 @@ class ${ENTITY} extends Entity
 }
 EOF
     fi
-    sed -i "s/class ${ENTITY} extends Entity/class ${ENTITY} extends \\\\${PLUGIN}\\\Model\\\Entity\\\OpencartCommon\\\\${ENTITY}/g" "${F}"
+    sed -i "s/class ${ENTITY} extends Entity/class ${ENTITY} extends \\\\${PLUGIN}\\\Model\\\Entity\\\OpencartAbstract\\\\Abstract${ENTITY}/g" "${F}"
     # Delete `use Cake\ORM\Entity;` and the empty line after it
     sed -i '/^use Cake\\\ORM\\\Entity;/{N;d;}' "${F}"
 done
