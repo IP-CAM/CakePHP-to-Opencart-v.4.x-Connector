@@ -18,10 +18,14 @@ if [ ! -f "${INFLECTOR}" ]; then
 fi
 
 PLUGIN="CakePHPOpencart" # Name of the plugin to hold Opencart connector code
+# Path to plugin files, i.e src/Model/Table/ExampleTable.php
+#PLUGIN_PATH="plugins/${PLUGIN}" # can be inside an existing CakePHP site
+#PLUGIN_PATH="/var/www/cakephp-${PLUGIN}" # can be inside separate folder
+PLUGIN_PATH="/var/www/cakephp-opencart"
 
 # Shorthand
-E="plugins/${PLUGIN}/src/Model/Entity"
-T="plugins/${PLUGIN}/src/Model/Table"
+E="${PLUGIN_PATH}/src/Model/Entity"
+T="${PLUGIN_PATH}/src/Model/Table"
 
 # Clean up
 rm -rf ${E}/Opencart${VER}
