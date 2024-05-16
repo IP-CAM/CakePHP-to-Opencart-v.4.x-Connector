@@ -17,7 +17,7 @@ if [ ! -f "${INFLECTOR}" ]; then
     exit 255
 fi
 
-read -p "Name of the plugin to hold Opencart connector code: " PLUGIN
+PLUGIN="CakePHPOpencart" # Name of the plugin to hold Opencart connector code
 
 # Shorthand
 E="plugins/${PLUGIN}/src/Model/Entity"
