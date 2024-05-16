@@ -34,6 +34,7 @@ mkdir -p ${E}/Opencart${VER}
 mkdir -p ${E}/OpencartAbstract
 rm -rf ${T}/Opencart${VER}
 mkdir -p ${T}/Opencart${VER}
+mkdir -p ${T}/OpencartAbstract
 
 # Get the list of all bake-able models. Results will be in CamelCase
 LIST=$(bin/cake bake model --connection opencart${VER}-clean | tail -n +2 -)
@@ -96,6 +97,27 @@ awk '
     { print }               # Print all other lines as is
 ' "${T}/Opencart${VER}/${TRANSLATABLE_ALIAS}Table.php" > /tmp/descriptions_tmp && mv /tmp/descriptions_tmp "${T}/Opencart${VER}/${TRANSLATABLE_ALIAS}Table.php"
     fi
+    # Table: Abstract
+    mkdir -p "${T}/OpencartAbstract"
+    if [ ! -f "${T}/OpencartAbstract/Abstract${ALIAS}Table.php" ]; then
+        cat > "${T}/OpencartAbstract/Abstract${ALIAS}Table.php" << EOF
+<?php
+
+namespace ${PLUGIN}\Model\Table\OpencartAbstract;
+
+use Cake\ORM\Table;
+
+abstract class Abstract${ALIAS}Table extends Table
+{
+
+
+
+}
+EOF
+    fi
+    sed -i "s/class ${ALIAS}Table extends Table/class ${ALIAS}Table extends \\\\${PLUGIN}\\\Model\\\Table\\\OpencartAbstract\\\\Abstract${ALIAS}Table/g" "${F}"
+    # Delete `use Cake\ORM\Table;`
+    sed -i '/^use Cake\\\ORM\\\Table;/d' "${F}"
 
     # Handle the Entity class
     mv "${E}/${ENTITY}.php" "${E}/Opencart${VER}/${ENTITY}.php"
