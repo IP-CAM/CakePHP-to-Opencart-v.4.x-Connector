@@ -131,11 +131,14 @@ class Connector extends Plugin
         // Get the carts list from the config
         $carts = Configure::read($this->getName().'.cartList');
         if (!$carts || !is_array($carts) || empty($carts)) {
-            return;
+            throw new InternalErrorException('No carts configured');
         }
         $cartSymbol = strtoupper($cartSymbol);
         if (!isset($carts[$cartSymbol])) {
-            return;
+            throw new InternalErrorException(sprintf(
+                'No cart configured for symbol %s. Available symbols: %s',
+                $cartSymbol, implode(', ', array_keys($carts))
+        ));
         }
         $cart = $carts[$cartSymbol];
         // Set the configured values
