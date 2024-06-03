@@ -5,7 +5,7 @@ namespace CakePHPOpencart;
 use Cake\Core\BasePlugin;
 use Cake\Core\Configure;
 use Cake\Core\PluginApplicationInterface;
-use Cake\Http\Exception\BadRequestException;
+use Cake\Http\Exception\InternalErrorException;
 
 class Connector extends Plugin
 {
@@ -126,7 +126,7 @@ class Connector extends Plugin
         }
         // If still nothing, throw an exception
         if (empty($cartSymbol)) {
-            throw new BadRequestException('Cart symbol not provided');
+            throw new InternalErrorException('Cart symbol not provided');
         }
         // Get the carts list from the config
         $carts = Configure::read($this->getName().'.cartList');
@@ -167,7 +167,7 @@ class Connector extends Plugin
         // Get the table
         $table = $tableLocator->get($this->getName().'.'.$tableName);
         if (get_class($table) == 'Cake\ORM\Table') {
-            throw new \Cake\Core\Exception\Exception(sprintf('Requested table %s resolves to generic %s. Make sure a concrete table class exists in %s', $tableName, get_class($table), $this->getPath().'src/Model/Table'));
+            throw new InternalErrorException(sprintf('Requested table %s resolves to generic %s. Make sure a concrete table class exists in %s', $tableName, get_class($table), $this->getPath().'src/Model/Table'));
         }
         // Attach the entity class
         $this->_attachEntity($table);
