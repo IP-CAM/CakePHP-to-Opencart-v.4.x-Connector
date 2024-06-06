@@ -7,8 +7,16 @@ use Cake\Core\Configure;
 use Cake\Core\PluginApplicationInterface;
 use Cake\Http\Exception\InternalErrorException;
 
-class Connector extends Plugin
+class Connector extends Plugin implements \Cake\Event\EventListenerInterface
 {
+
+    public function implementedEvents()
+    {
+        return [
+            // Listens to every Model.initialize (filters relevant later)
+            'Model.initialize' => 'onEveryModelInitialize',
+        ];
+    }
 
     private $_symbol;
     private $_CartName;
@@ -114,6 +122,58 @@ class Connector extends Plugin
     }
 
     /**
+     * Listens to every Model.initialize. Skips models not in this plugin.
+     * And every model inside this plugin is prepared.
+     *
+     * (Prepared means using the right connection and entity class.)
+     *
+     * @param Cake\Event\Event $event a Model.initialize event
+     * @throws \Exception
+     */
+    public function onEveryModelInitialize($event)
+    {
+        // Get table class that was just initialised
+        $table = $event->getSubject();
+        // The registry alias is in Plugin.Model format; split it
+        list($plugin, $tableAlias) = pluginSplit($table->getRegistryAlias());
+        // Skip right away if this is not a model inside this plugin
+        if ($plugin !== $this->getName()) {
+            return;
+        }
+        // Throw exception if no datasource to use has been set yet
+        if (empty($this->getDatasource())) {
+            throw new \Exception(
+                'No data source was set for '.$this->getName()
+            );
+        }
+        // Make sure the table uses the right connection
+        $datasource = $this->getDatasource();
+        $connection = \Cake\Datasource\ConnectionManager::get($datasource);
+        $table->setConnection($connection);
+        unset($datasource, $connection);
+        // Make sure the table uses the right entity class
+        $this->_attachEntity($table);
+        // Specify language_id in associations to translation classes
+        foreach ($table->associations() as $association) {
+            /*
+            Opencart stores translations in tables with suffix "_description",
+            but bake doesn't automatically pick that relation up. So we manually
+            associated translatable items (in their respective table classes) as
+            - hasMany Descriptions for selects containing all languages
+            - hasOne  Description  for selecting default language translations
+            Default language is configured dynamically using plugin config and
+            is used below to create a condition for selecting right translation
+            */
+            if (substr($association->getName(), -11) == 'Description'
+            && empty($association->getConditions())) {
+                $association->setConditions([
+                    $association->getName().'.language_id' => $this->getLanguageId()
+                ]);
+            }
+        }
+    }
+
+    /**
      * Connector constructor.
      *
      * @param null $cartSymbol identifies the cart to load from the config
@@ -153,6 +213,8 @@ class Connector extends Plugin
         if (!empty($cart['languageId'])) {
             $this->setLanguageId($cart['languageId']);
         }
+        // Attach the ModelInitializeListener
+        \Cake\Event\EventManager::instance()->on($this);
     }
 
     /**
@@ -171,31 +233,6 @@ class Connector extends Plugin
         $table = $tableLocator->get($this->getName().'.'.$tableName);
         if (get_class($table) == 'Cake\ORM\Table') {
             throw new InternalErrorException(sprintf('Requested table %s resolves to generic %s. Make sure a concrete table class exists in %s', $tableName, get_class($table), $this->getPath().'src/Model/Table'));
-        }
-        // Attach the entity class
-        $this->_attachEntity($table);
-        // Set the connection
-        $connection = \Cake\Datasource\ConnectionManager::get($this->getDatasource());
-        $table->setConnection($connection);
-        foreach ($table->associations() as $association) {
-            /*
-            Opencart stores translations in tables with suffix "_description",
-            but bake doesn't automatically pick that relation up. So we manually
-            associated translatable items (in their respective table classes) as
-            - hasOne Description for selecting translations in default language
-            - hasMany Descriptions for selects containing all languages
-            The below populates conditions with languageId from plugin config
-            */
-            if (substr($association->getName(), -11) == 'Description'
-            && empty($association->getConditions())) {
-                $association->setConditions([
-                    $association->getName().'.language_id' => $this->getLanguageId()
-                ]);
-            }
-            // Ensure associated table uses the same datasource/connection
-            $association->setConnection($association->getSource()->getConnection());
-            // Ensure associated table looks for matching entity
-            $this->_attachEntity($association->getTarget());
         }
         return $table;
     }
