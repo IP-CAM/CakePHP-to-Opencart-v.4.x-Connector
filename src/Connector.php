@@ -138,7 +138,7 @@ class Connector extends Plugin
             throw new InternalErrorException(sprintf(
                 'No cart configured for symbol %s. Available symbols: %s',
                 $cartSymbol, implode(', ', array_keys($carts))
-        ));
+            ));
         }
         $cart = $carts[$cartSymbol];
         // Set the configured values
