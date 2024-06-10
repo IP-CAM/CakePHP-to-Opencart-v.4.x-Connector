@@ -277,7 +277,7 @@ class Connector extends Plugin implements \Cake\Event\EventListenerInterface
     private function _locateEntity($entityName)
     {
         $entityPath = $entityName;
-        // If no entity path is configured, use only the entity name
+        // If no local path configured, use only entity name, don't look further
         if (empty($this->getLocalPath())) {
             return $entityPath;
         }
