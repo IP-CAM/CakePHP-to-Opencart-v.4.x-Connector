@@ -251,17 +251,8 @@ class Connector extends Plugin implements \Cake\Event\EventListenerInterface
         $tableName = $table->getTable();
         // Convert plural table name to singular entity name
         $entityName = \Cake\Utility\Inflector::classify(\Cake\Utility\Inflector::underscore($tableName));
-        // From the outside we refer to entities here as CakePHPOpencart\Model\Entity\Order
-        $classAlias = sprintf('%s\Model\Entity\%s', $this->getName(), $entityName);
-        // Internally, the real entity path depends on cart type from the config
-        $realClassPath = sprintf('%s\Model\Entity\%s\%s', $this->getName(), $this->getType(), $entityName);
-        // Only if the alias has not been declared yet and the real class exists
-        if (!\class_exists($classAlias) && \class_exists($realClassPath)) {
-            //...link the "external" class alias to the real internal class path
-            \class_alias($realClassPath, $classAlias);
-        }
         // Find the entity location
-        $entityLocation = $this->_locateEntity($entityName);
+        $entityLocation = $this->_locateModelClass($entityName, 'Entity');
         // Attempt to set the entity class only if it exists
         if ($entityLocation) {
             $table->setEntityClass($entityLocation);
@@ -269,32 +260,57 @@ class Connector extends Plugin implements \Cake\Event\EventListenerInterface
     }
 
     /**
-     * Tries various entity class locations for given entity name
+     * Tries various class locations for given model (entity or table) name
      *
-     * @param $entityName
+     * @param string $name model we're looking for; no Table suffix for tables
+     * @param string $dir Entity|Table
      * @return string|null CakePHP-compatible class alias in dot notation or not
      */
-    private function _locateEntity($entityName)
+    private function _locateModelClass($name, $dir)
     {
-        $entityPath = $entityName;
+        // Allow only Entity or Table as $dir values
+        if (!in_array($dir, ['Entity', 'Table'])) {
+            throw new \Exception(sprintf(
+                '$dir needs to be either Entity or Table, received "%s"', $dir
+            ));
+        }
+        // className() looks for exact file names, so add suffix for tables
+        $lookup_name = $name . ($dir == 'Table' ? 'Table' : '');
         // If no local path configured, use only entity name, don't look further
         if (empty($this->getLocalPath())) {
-            return $entityPath;
+            return $name;
         }
-        // Local path is where overriding classes may be stored in App itself
-        $entityPath = trim($this->getLocalPath(), '/') . '/' . $entityPath;
-        // See if overriding entity has been created on the App level
-        if (\Cake\Core\App::className($entityPath, 'Model/Entity')) {
-            return $entityPath;
+        /*
+         * From the outside we refer to model files here in this plugin as e.g.:
+         * - CakePHPOpencart\Model\Entity\Order
+         * - CakePHPOpencart\Model\Table\OrdersTable
+         * In other words, no mention of cart type, i.e. if it's Opencart 2 or 4
+         */
+        // Build cart type-agnostic class alias we will be referring to
+        $classAlias = sprintf('%s\Model\%s\%s', $this->getName(), $dir, $lookup_name);
+        // Internally, the real class path depends on cart type from the config
+        $realClassPath = sprintf('%s\Model\%s\%s\%s', $this->getName(), $dir, $this->getType(), $lookup_name);
+        // Only if the alias has not been declared yet and the real class exists
+        if (!\class_exists($classAlias) && \class_exists($realClassPath)) {
+            //...link the "external" class alias to the real internal class path
+            \class_alias($realClassPath, $classAlias);
+            // This sets up Opencart version-agnostic alias we look up below
+            // Actual version is picked up automatically from the config
         }
-        unset($entityPath);
+        // Local path is where overriding classes *may* be stored in App itself
+        $path = trim($this->getLocalPath(), '/') . '/' . $lookup_name;
+        // See if overriding model class has been created in App itself
+        if (\Cake\Core\App::className($path, 'Model/'.$dir)) {
+            return $path;
+        }
+        unset($path);
         // See if the entity exists in this plugin
-        if (\Cake\Core\App::className($this->getName().'.'.$entityName, 'Model/Entity')) {
-            return $this->getName().'.'.$entityName;
+        if (\Cake\Core\App::className($this->getName().'.'.$lookup_name, 'Model/'.$dir)) {
+            return $this->getName().'.'.$name;
         }
         // Finally, just have CakePHP look for an entity by its name
-        if (\Cake\Core\App::className($entityName, 'Model/Entity')) {
-            return $entityName;
+        if (\Cake\Core\App::className($lookup_name, 'Model/'.$dir)) {
+            return $name;
         }
         return null;
     }
