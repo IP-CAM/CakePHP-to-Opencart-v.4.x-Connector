@@ -213,7 +213,7 @@ class Connector extends Plugin implements \Cake\Event\EventListenerInterface
         if (!empty($cart['languageId'])) {
             $this->setLanguageId($cart['languageId']);
         }
-        // Attach the ModelInitializeListener
+        // Attach this class as Model.initialize listener
         \Cake\Event\EventManager::instance()->on($this);
     }
 
