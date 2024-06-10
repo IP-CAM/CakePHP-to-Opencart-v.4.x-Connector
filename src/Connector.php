@@ -229,8 +229,22 @@ class Connector extends Plugin implements \Cake\Event\EventListenerInterface
         $tableLocator = $tableRegistry->getTableLocator();
         // Make sure table is looked up in cart type folder
         $tableLocator->addLocation('Model/Table/'.$this->getType());
+        $tableIdentifier = $this->_locateModelClass($tableName, 'Table');
+        // If the table class found is located in App itself
+        if (strpos($tableIdentifier, '/') !== false) {
+            // Drop table class name, keep only location
+            $tableLocation = dirname($tableIdentifier);
+            // Make locator aware of location where table class was found
+            $tableLocator->addLocation('Model/Table/'.$tableLocation);
+            // Since we're on App level, look up table by its name only
+            $tableIdentifier = $tableName;
+        }
         // Get the table
-        $table = $tableLocator->get($this->getName().'.'.$tableName);
+        $table = $tableLocator->get($tableIdentifier, [
+            // Always ensure we're using connection configured for this plugin
+            'connectionName' => $this->getDatasource()
+            // …otherwise contained table may default to app's connection
+        ]);
         if (get_class($table) == 'Cake\ORM\Table') {
             throw new InternalErrorException(sprintf('Requested table %s resolves to generic %s. Make sure a concrete table class exists in %s', $tableName, get_class($table), $this->getPath().'src/Model/Table'));
         }
