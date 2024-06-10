@@ -227,7 +227,7 @@ class Connector extends Plugin implements \Cake\Event\EventListenerInterface
     {
         $tableRegistry = new \Cake\ORM\TableRegistry();
         $tableLocator = $tableRegistry->getTableLocator();
-        // Make sure the table is looked up in the right place
+        // Make sure table is looked up in cart type folder
         $tableLocator->addLocation('Model/Table/'.$this->getType());
         // Get the table
         $table = $tableLocator->get($this->getName().'.'.$tableName);
