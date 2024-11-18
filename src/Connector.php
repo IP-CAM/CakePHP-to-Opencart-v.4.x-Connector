@@ -7,16 +7,8 @@ use Cake\Core\Configure;
 use Cake\Core\PluginApplicationInterface;
 use Cake\Http\Exception\InternalErrorException;
 
-class Connector extends Plugin implements \Cake\Event\EventListenerInterface
+class Connector extends Plugin
 {
-
-    public function implementedEvents()
-    {
-        return [
-            // Listens to every Model.initialize (filters relevant later)
-            'Model.initialize' => 'onEveryModelInitialize',
-        ];
-    }
 
     private $_symbol;
     private $_CartName;
@@ -213,8 +205,8 @@ class Connector extends Plugin implements \Cake\Event\EventListenerInterface
         if (!empty($cart['languageId'])) {
             $this->setLanguageId($cart['languageId']);
         }
-        // Attach this class as Model.initialize listener
-        \Cake\Event\EventManager::instance()->on($this);
+        // Listen to every Model.initialize (filters irrelevant out later)
+        \Cake\Event\EventManager::instance()->on('Model.initialize', [$this, 'onEveryModelInitialize']);
     }
 
     /**
