@@ -172,14 +172,14 @@ class Connector extends Plugin
     {
         // If none provided, see if a default is configured on the app level
         if (empty($cartSymbol)) {
-            $cartSymbol = Configure::read($this->getName().'.defaultCart');
+            $cartSymbol = Configure::read($this->getName().'.defaultSite');
         }
         // If still nothing, throw an exception
         if (empty($cartSymbol)) {
             throw new InternalErrorException('Cart symbol not provided');
         }
         // Get the carts list from the config
-        $carts = Configure::read($this->getName().'.cartList');
+        $carts = Configure::read($this->getName().'.siteList');
         if (!$carts || !is_array($carts) || empty($carts)) {
             throw new InternalErrorException('No carts configured');
         }

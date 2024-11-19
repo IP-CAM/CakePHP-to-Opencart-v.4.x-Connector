@@ -2,7 +2,7 @@
 
 return [
     'CakePHPOpencart' => [ // Must match the name of this plugin
-        'cartList' => [
+        'siteList' => [
             'ABC' => [ // Arbitrary UPPERCASE key identifying this configuration
                 'name' => 'ABC Shop', // Display name for this cart/multistore
                 'datasource' => 'opencart', // Opencart DB in APP/config/app.php
