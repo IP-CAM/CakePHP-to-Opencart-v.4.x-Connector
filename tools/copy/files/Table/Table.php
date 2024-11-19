@@ -2,6 +2,6 @@
 
 namespace CakePHPOpencart\Model\Table;
 
-class Table extends \Cake\ORM\Table
+class Table extends \Bakeoff\CmsConnector\Model\Table\Table
 {
 }
