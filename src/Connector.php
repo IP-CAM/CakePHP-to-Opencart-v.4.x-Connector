@@ -8,12 +8,13 @@ use Cake\Http\Exception\InternalErrorException;
 class Connector extends Plugin
 {
 
+    use \Cake\Core\InstanceConfigTrait;
+    /**
+     * @var array expected by \Cake\Core\InstanceConfigTrait
+     */
+    protected $_defaultConfig = [];
+
     private $_symbol;
-    private $_CartName;
-    private $_datasource;
-    private $_type;
-    private $_localPath;
-    private $_languageId;
 
     /**
      * @return string
@@ -29,86 +30,6 @@ class Connector extends Plugin
     public function setSymbol($symbol)
     {
         $this->_symbol = $symbol;
-    }
-
-    /**
-     * @return string
-     */
-    public function getCartName()
-    {
-        return $this->_CartName;
-    }
-
-    /**
-     * @param string $name
-     */
-    public function setCartName($name)
-    {
-        $this->_CartName = $name;
-    }
-
-    /**
-     * @return string
-     */
-    public function getDatasource()
-    {
-        return $this->_datasource;
-    }
-
-    /**
-     * @param string $datasource
-     */
-    public function setDatasource($datasource)
-    {
-        $this->_datasource = $datasource;
-    }
-
-    /**
-     * @return string
-     */
-    public function getType()
-    {
-        return $this->_type;
-    }
-
-    /**
-     * @param string $type
-     */
-    public function setType($type)
-    {
-        $this->_type = $type;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getLocalPath()
-    {
-        return $this->_localPath;
-    }
-
-    /**
-     * @param mixed $localPath
-     */
-    public function setLocalPath($localPath)
-    {
-        $this->_localPath = $localPath;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getLanguageId()
-    {
-        return $this->_languageId;
-    }
-
-    /**
-     * @param mixed $language_Id
-     */
-    public function setLanguageId($languageId)
-    {
-        $this->_languageId = $languageId;
     }
 
     /**
@@ -131,13 +52,13 @@ class Connector extends Plugin
             return;
         }
         // Throw exception if no datasource to use has been set yet
-        if (empty($this->getDatasource())) {
+        if (empty($this->getConfig('datasource'))) {
             throw new \Exception(
                 'No data source was set for '.$this->getName()
             );
         }
         // Make sure the table uses the right connection
-        $datasource = $this->getDatasource();
+        $datasource = $this->getConfig('datasource');
         $connection = \Cake\Datasource\ConnectionManager::get($datasource);
         $table->setConnection($connection);
         unset($datasource, $connection);
@@ -157,7 +78,7 @@ class Connector extends Plugin
             if (substr($association->getName(), -11) == 'Description'
             && empty($association->getConditions())) {
                 $association->setConditions([
-                    $association->getName().'.language_id' => $this->getLanguageId()
+                    $association->getName().'.language_id' => $this->getConfig('languageId')
                 ]);
             }
         }
@@ -190,19 +111,9 @@ class Connector extends Plugin
                 $cartSymbol, implode(', ', array_keys($carts))
             ));
         }
-        $cart = $carts[$cartSymbol];
         // Set the configured values
         $this->setSymbol($cartSymbol);
-        $this->setCartName($cart['name']);
-        $this->setDatasource($cart['datasource']);
-        $this->setType($cart['type']);
-        // If overriding model classes on App level place them in this subfolder
-        if (!empty($cart['localPath'])) {
-            $this->setLocalPath($cart['localPath']);
-        }
-        if (!empty($cart['languageId'])) {
-            $this->setLanguageId($cart['languageId']);
-        }
+        $this->setConfig($carts[$cartSymbol]);
         // Listen to every Model.initialize (filters irrelevant out later)
         \Cake\Event\EventManager::instance()->on('Model.initialize', [$this, 'onEveryModelInitialize']);
     }
@@ -218,7 +129,7 @@ class Connector extends Plugin
         $tableRegistry = new \Cake\ORM\TableRegistry();
         $tableLocator = $tableRegistry->getTableLocator();
         // Make sure table is looked up in cart type folder
-        $tableLocator->addLocation('Model/Table/'.$this->getType());
+        $tableLocator->addLocation('Model/Table/'.$this->getConfig('type'));
         $tableIdentifier = $this->_locateModelClass($tableName, 'Table');
         // If the table class found is located in App itself
         if (strpos($tableIdentifier, '/') !== false) {
@@ -232,7 +143,7 @@ class Connector extends Plugin
         // Get the table
         $table = $tableLocator->get($tableIdentifier, [
             // Always ensure we're using connection configured for this plugin
-            'connectionName' => $this->getDatasource()
+            'connectionName' => $this->getConfig('datasource')
             // …otherwise contained table may default to app's connection
         ]);
         if (get_class($table) == 'Cake\ORM\Table') {
@@ -281,7 +192,7 @@ class Connector extends Plugin
         // className() looks for exact file names, so add suffix for tables
         $lookup_name = $name . ($dir == 'Table' ? 'Table' : '');
         // If no local path configured, use only entity name, don't look further
-        if (empty($this->getLocalPath())) {
+        if (empty($this->getConfig('localPath'))) {
             return $name;
         }
         /*
@@ -293,7 +204,7 @@ class Connector extends Plugin
         // Build cart type-agnostic class alias we will be referring to
         $classAlias = sprintf('%s\Model\%s\%s', $this->getName(), $dir, $lookup_name);
         // Internally, the real class path depends on cart type from the config
-        $realClassPath = sprintf('%s\Model\%s\%s\%s', $this->getName(), $dir, $this->getType(), $lookup_name);
+        $realClassPath = sprintf('%s\Model\%s\%s\%s', $this->getName(), $dir, $this->getConfig('type'), $lookup_name);
         // Only if the alias has not been declared yet and the real class exists
         if (!\class_exists($classAlias) && \class_exists($realClassPath)) {
             //...link the "external" class alias to the real internal class path
@@ -302,7 +213,7 @@ class Connector extends Plugin
             // Actual version is picked up automatically from the config
         }
         // Local path is where overriding classes *may* be stored in App itself
-        $path = trim($this->getLocalPath(), '/') . '/' . $lookup_name;
+        $path = trim($this->getConfig('localPath'), '/') . '/' . $lookup_name;
         // See if overriding model class has been created in App itself
         if (\Cake\Core\App::className($path, 'Model/'.$dir)) {
             return $path;
