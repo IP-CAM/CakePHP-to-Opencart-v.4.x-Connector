@@ -145,3 +145,13 @@ EOF
     # Delete `use Cake\ORM\Entity;` and the empty line after it
     sed -i '/^use Cake\\\ORM\\\Entity;/{N;d;}' "${F}"
 done
+
+# Copy complete model files from ./copy/files
+COPY_FILES_PATH="$(dirname "$0")/copy/files"
+find "${COPY_FILES_PATH}/" -type f | while read -r FILE; do
+    # Replace \${VER} (if any) in source file path with actual ${VER}
+    DESTINATION="${PLUGIN_PATH}/src/Model/"$(echo "${FILE#${COPY_FILES_PATH}/}" | sed "s/\${VER}/$VER/")
+    cp -f "${FILE}" "${DESTINATION}"
+    # Replace \${VER} (if any) in PHP namespaces with actual ${VER}
+    sed -i "/^namespace.*\${VER}.*;$/ s/\${VER}/${VER}/g" "${DESTINATION}"
+done
