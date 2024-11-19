@@ -53,7 +53,7 @@ class AttributesTable extends \CakePHPOpencart\Model\Table\OpencartAbstract\Abst
         ]);
         $this->hasOne('AttributeDescription', [
             'foreignKey' => 'attribute_id',
-            'className' => 'CakePHPOpencart.AttributeDescription',
+            'className' => 'CakePHPOpencart.AttributeDescriptions',
             'conditions' => [
                 // to be populated by CakePHPOpencart\Connector
             ],

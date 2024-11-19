@@ -38,7 +38,7 @@ class InformationTable extends \CakePHPOpencart\Model\Table\OpencartAbstract\Abs
         ]);
         $this->hasOne('InformationDescription', [
             'foreignKey' => 'information_id',
-            'className' => 'CakePHPOpencart.InformationDescription',
+            'className' => 'CakePHPOpencart.InformationDescriptions',
             'conditions' => [
                 // to be populated by CakePHPOpencart\Connector
             ],

@@ -60,7 +60,7 @@ class FiltersTable extends \CakePHPOpencart\Model\Table\OpencartAbstract\Abstrac
         ]);
         $this->hasOne('FilterDescription', [
             'foreignKey' => 'filter_id',
-            'className' => 'CakePHPOpencart.FilterDescription',
+            'className' => 'CakePHPOpencart.FilterDescriptions',
             'conditions' => [
                 // to be populated by CakePHPOpencart\Connector
             ],

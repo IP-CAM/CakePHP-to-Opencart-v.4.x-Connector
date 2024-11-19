@@ -53,7 +53,7 @@ class MenusTable extends \CakePHPOpencart\Model\Table\OpencartAbstract\AbstractM
         ]);
         $this->hasOne('MenuDescription', [
             'foreignKey' => 'menu_id',
-            'className' => 'CakePHPOpencart.MenuDescription',
+            'className' => 'CakePHPOpencart.MenuDescriptions',
             'conditions' => [
                 // to be populated by CakePHPOpencart\Connector
             ],

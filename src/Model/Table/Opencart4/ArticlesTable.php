@@ -46,7 +46,7 @@ class ArticlesTable extends \CakePHPOpencart\Model\Table\OpencartAbstract\Abstra
         ]);
         $this->hasOne('ArticleDescription', [
             'foreignKey' => 'article_id',
-            'className' => 'CakePHPOpencart.ArticleDescription',
+            'className' => 'CakePHPOpencart.ArticleDescriptions',
             'conditions' => [
                 // to be populated by CakePHPOpencart\Connector
             ],

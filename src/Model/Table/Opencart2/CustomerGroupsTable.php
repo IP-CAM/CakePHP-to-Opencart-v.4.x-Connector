@@ -47,7 +47,7 @@ class CustomerGroupsTable extends \CakePHPOpencart\Model\Table\OpencartAbstract\
         ]);
         $this->hasOne('CustomerGroupDescription', [
             'foreignKey' => 'customer_group_id',
-            'className' => 'CakePHPOpencart.CustomerGroupDescription',
+            'className' => 'CakePHPOpencart.CustomerGroupDescriptions',
             'conditions' => [
                 // to be populated by CakePHPOpencart\Connector
             ],

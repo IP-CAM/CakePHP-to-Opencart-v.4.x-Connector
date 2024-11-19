@@ -38,7 +38,7 @@ class FilterGroupsTable extends \CakePHPOpencart\Model\Table\OpencartAbstract\Ab
         ]);
         $this->hasOne('FilterGroupDescription', [
             'foreignKey' => 'filter_group_id',
-            'className' => 'CakePHPOpencart.FilterGroupDescription',
+            'className' => 'CakePHPOpencart.FilterGroupDescriptions',
             'conditions' => [
                 // to be populated by CakePHPOpencart\Connector
             ],

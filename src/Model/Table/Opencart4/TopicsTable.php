@@ -38,7 +38,7 @@ class TopicsTable extends \CakePHPOpencart\Model\Table\OpencartAbstract\Abstract
         ]);
         $this->hasOne('TopicDescription', [
             'foreignKey' => 'topic_id',
-            'className' => 'CakePHPOpencart.TopicDescription',
+            'className' => 'CakePHPOpencart.TopicDescriptions',
             'conditions' => [
                 // to be populated by CakePHPOpencart\Connector
             ],

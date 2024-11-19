@@ -54,7 +54,7 @@ class RecurringsTable extends \CakePHPOpencart\Model\Table\OpencartAbstract\Abst
         ]);
         $this->hasOne('RecurringDescription', [
             'foreignKey' => 'recurring_id',
-            'className' => 'CakePHPOpencart.RecurringDescription',
+            'className' => 'CakePHPOpencart.RecurringDescriptions',
             'conditions' => [
                 // to be populated by CakePHPOpencart\Connector
             ],

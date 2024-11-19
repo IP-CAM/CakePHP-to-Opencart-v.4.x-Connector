@@ -38,7 +38,7 @@ class VoucherThemesTable extends \CakePHPOpencart\Model\Table\OpencartAbstract\A
         ]);
         $this->hasOne('VoucherThemeDescription', [
             'foreignKey' => 'voucher_theme_id',
-            'className' => 'CakePHPOpencart.VoucherThemeDescription',
+            'className' => 'CakePHPOpencart.VoucherThemeDescriptions',
             'conditions' => [
                 // to be populated by CakePHPOpencart\Connector
             ],

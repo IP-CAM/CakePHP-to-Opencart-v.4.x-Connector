@@ -54,7 +54,7 @@ class OptionsTable extends \CakePHPOpencart\Model\Table\OpencartAbstract\Abstrac
         ]);
         $this->hasOne('OptionDescription', [
             'foreignKey' => 'option_id',
-            'className' => 'CakePHPOpencart.OptionDescription',
+            'className' => 'CakePHPOpencart.OptionDescriptions',
             'conditions' => [
                 // to be populated by CakePHPOpencart\Connector
             ],

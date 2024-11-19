@@ -53,7 +53,7 @@ class OptionValuesTable extends \CakePHPOpencart\Model\Table\OpencartAbstract\Ab
         ]);
         $this->hasOne('OptionValueDescription', [
             'foreignKey' => 'option_value_id',
-            'className' => 'CakePHPOpencart.OptionValueDescription',
+            'className' => 'CakePHPOpencart.OptionValueDescriptions',
             'conditions' => [
                 // to be populated by CakePHPOpencart\Connector
             ],

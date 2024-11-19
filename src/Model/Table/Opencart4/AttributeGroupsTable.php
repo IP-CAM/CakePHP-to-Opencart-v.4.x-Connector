@@ -38,7 +38,7 @@ class AttributeGroupsTable extends \CakePHPOpencart\Model\Table\OpencartAbstract
         ]);
         $this->hasOne('AttributeGroupDescription', [
             'foreignKey' => 'attribute_group_id',
-            'className' => 'CakePHPOpencart.AttributeGroupDescription',
+            'className' => 'CakePHPOpencart.AttributeGroupDescriptions',
             'conditions' => [
                 // to be populated by CakePHPOpencart\Connector
             ],

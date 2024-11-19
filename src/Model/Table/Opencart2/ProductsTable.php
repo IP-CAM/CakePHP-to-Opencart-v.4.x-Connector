@@ -119,7 +119,7 @@ class ProductsTable extends \CakePHPOpencart\Model\Table\OpencartAbstract\Abstra
         ]);
         $this->hasOne('ProductDescription', [
             'foreignKey' => 'product_id',
-            'className' => 'CakePHPOpencart.ProductDescription',
+            'className' => 'CakePHPOpencart.ProductDescriptions',
             'conditions' => [
                 // to be populated by CakePHPOpencart\Connector
             ],

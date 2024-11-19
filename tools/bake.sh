@@ -78,7 +78,7 @@ for NAME in ${LIST}; do
         ]);
         \$this->hasOne('${NAME}', [
             'foreignKey' => '${TRANSLATABLE_TABLE}_id',
-            'className' => '${PLUGIN}.${NAME}',
+            'className' => '${PLUGIN}.${ALIAS}',
             'conditions' => [
                 // to be populated by ${PLUGIN}\Connector
             ],

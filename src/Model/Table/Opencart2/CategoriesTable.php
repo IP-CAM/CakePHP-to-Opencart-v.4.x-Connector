@@ -64,7 +64,7 @@ class CategoriesTable extends \CakePHPOpencart\Model\Table\OpencartAbstract\Abst
         ]);
         $this->hasOne('CategoryDescription', [
             'foreignKey' => 'category_id',
-            'className' => 'CakePHPOpencart.CategoryDescription',
+            'className' => 'CakePHPOpencart.CategoryDescriptions',
             'conditions' => [
                 // to be populated by CakePHPOpencart\Connector
             ],

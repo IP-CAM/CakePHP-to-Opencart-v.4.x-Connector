@@ -38,7 +38,7 @@ class DownloadsTable extends \CakePHPOpencart\Model\Table\OpencartAbstract\Abstr
         ]);
         $this->hasOne('DownloadDescription', [
             'foreignKey' => 'download_id',
-            'className' => 'CakePHPOpencart.DownloadDescription',
+            'className' => 'CakePHPOpencart.DownloadDescriptions',
             'conditions' => [
                 // to be populated by CakePHPOpencart\Connector
             ],

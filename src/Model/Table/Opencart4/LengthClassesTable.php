@@ -38,7 +38,7 @@ class LengthClassesTable extends \CakePHPOpencart\Model\Table\OpencartAbstract\A
         ]);
         $this->hasOne('LengthClassDescription', [
             'foreignKey' => 'length_class_id',
-            'className' => 'CakePHPOpencart.LengthClassDescription',
+            'className' => 'CakePHPOpencart.LengthClassDescriptions',
             'conditions' => [
                 // to be populated by CakePHPOpencart\Connector
             ],

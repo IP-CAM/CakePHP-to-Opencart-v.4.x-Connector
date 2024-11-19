@@ -38,7 +38,7 @@ class WeightClassesTable extends \CakePHPOpencart\Model\Table\OpencartAbstract\A
         ]);
         $this->hasOne('WeightClassDescription', [
             'foreignKey' => 'weight_class_id',
-            'className' => 'CakePHPOpencart.WeightClassDescription',
+            'className' => 'CakePHPOpencart.WeightClassDescriptions',
             'conditions' => [
                 // to be populated by CakePHPOpencart\Connector
             ],

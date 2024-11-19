@@ -47,7 +47,7 @@ class CustomFieldsTable extends \CakePHPOpencart\Model\Table\OpencartAbstract\Ab
         ]);
         $this->hasOne('CustomFieldDescription', [
             'foreignKey' => 'custom_field_id',
-            'className' => 'CakePHPOpencart.CustomFieldDescription',
+            'className' => 'CakePHPOpencart.CustomFieldDescriptions',
             'conditions' => [
                 // to be populated by CakePHPOpencart\Connector
             ],

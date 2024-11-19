@@ -38,7 +38,7 @@ class SubscriptionPlansTable extends \CakePHPOpencart\Model\Table\OpencartAbstra
         ]);
         $this->hasOne('SubscriptionPlanDescription', [
             'foreignKey' => 'subscription_plan_id',
-            'className' => 'CakePHPOpencart.SubscriptionPlanDescription',
+            'className' => 'CakePHPOpencart.SubscriptionPlanDescriptions',
             'conditions' => [
                 // to be populated by CakePHPOpencart\Connector
             ],
