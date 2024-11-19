@@ -2,9 +2,7 @@
 
 namespace CakePHPOpencart\Model\Entity\OpencartAbstract;
 
-use Cake\ORM\Entity;
-
-abstract class AbstractCountry extends Entity
+abstract class AbstractCountry extends \CakePHPOpencart\Model\Entity\Entity
 {
 
     protected function _getCode()

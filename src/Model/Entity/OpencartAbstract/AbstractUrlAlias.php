@@ -2,11 +2,7 @@
 
 namespace CakePHPOpencart\Model\Entity\OpencartAbstract;
 
-use Cake\ORM\Entity;
-
-abstract class AbstractUrlAlias extends Entity
+abstract class AbstractUrlAlias extends \CakePHPOpencart\Model\Entity\Entity
 {
-
-
 
 }

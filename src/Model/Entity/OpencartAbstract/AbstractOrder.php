@@ -2,9 +2,7 @@
 
 namespace CakePHPOpencart\Model\Entity\OpencartAbstract;
 
-use Cake\ORM\Entity;
-
-abstract class AbstractOrder extends Entity
+abstract class AbstractOrder extends \CakePHPOpencart\Model\Entity\Entity
 {
 
     protected function _getPaymentFullName()

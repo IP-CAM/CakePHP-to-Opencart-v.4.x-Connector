@@ -105,12 +105,8 @@ awk '
 
 namespace ${PLUGIN}\Model\Table\OpencartAbstract;
 
-use Cake\ORM\Table;
-
-abstract class Abstract${ALIAS}Table extends Table
+abstract class Abstract${ALIAS}Table extends \\${PLUGIN}\Model\Table\Table
 {
-
-
 
 }
 EOF
@@ -131,12 +127,8 @@ EOF
 
 namespace ${PLUGIN}\Model\Entity\OpencartAbstract;
 
-use Cake\ORM\Entity;
-
-abstract class Abstract${ENTITY} extends Entity
+abstract class Abstract${ENTITY} extends \\${PLUGIN}\Model\Entity\Entity
 {
-
-
 
 }
 EOF

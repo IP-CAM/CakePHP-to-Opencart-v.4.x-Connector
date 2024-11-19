@@ -2,11 +2,7 @@
 
 namespace CakePHPOpencart\Model\Table\OpencartAbstract;
 
-use Cake\ORM\Table;
-
-abstract class AbstractZonesTable extends Table
+abstract class AbstractZonesTable extends \CakePHPOpencart\Model\Table\Table
 {
-
-
 
 }

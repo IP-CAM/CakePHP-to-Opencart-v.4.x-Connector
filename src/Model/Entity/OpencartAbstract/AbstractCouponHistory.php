@@ -2,11 +2,7 @@
 
 namespace CakePHPOpencart\Model\Entity\OpencartAbstract;
 
-use Cake\ORM\Entity;
-
-abstract class AbstractCouponHistory extends Entity
+abstract class AbstractCouponHistory extends \CakePHPOpencart\Model\Entity\Entity
 {
-
-
 
 }
