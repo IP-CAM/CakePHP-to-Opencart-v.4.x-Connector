@@ -4,7 +4,7 @@
     "type": "cakephp-plugin",
     "keywords": ["cakephp", "opencart", "ecommerce"],
     "require": {
-        "cakephp/cakephp": "^3.0",
+        "cakephp/cakephp": ">=3.0",
         "bakeoff/cms-connector": "dev-master"
     },
     "autoload": {
